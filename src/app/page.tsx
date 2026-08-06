@@ -338,7 +338,7 @@ export default function HomePage() {
             <div className="space-y-2">
               <h4 className="text-lg font-bold text-sky-400">Impulso a Socios y Entidades Locales</h4>
               <p className="text-sm text-slate-300 leading-relaxed">
-                Co-diseñamos programas con escuelas, centros comunitarios y ayuntamientos en Cataluña para llevar formación en tecnología, idiomas e innovación social.
+                Co-diseñamos programas con escuelas, centros comunitarios y organizaciones locales en Cataluña para llevar formación en tecnología, idiomas e innovación social.
               </p>
             </div>
             <div className="space-y-2">

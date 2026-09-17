@@ -11,12 +11,17 @@ import {
   Heart
 } from 'lucide-react';
 
-export default function HomePage() {
+export const metadata = {
+  title: 'Asociación Cristiana EducaFe | Acción Socioeducativa e Inclusión Juvenil',
+  description: 'Entidad sin ánimo de lucro en Cataluña. Oportunidades educativas para la infancia, la adolescencia y las familias.',
+};
+
+export default function EsHomePage() {
   return (
     <div className="space-y-16 sm:space-y-20 pb-20">
       
       {/* ==================================================================== */}
-      {/* 1. HERO INSTITUCIONAL CLAR, LLUUMINÓS I AMB FOTO D'EQUIP VISIBLE */}
+      {/* 1. HERO INSTITUCIONAL CLARO, LUMINOSO Y CON FOTO DE EQUIPO VISIBLE */}
       {/* ==================================================================== */}
       <section className="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white pt-10 pb-16 sm:pt-14 sm:pb-20 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,60 +32,60 @@ export default function HomePage() {
               
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/90 text-sky-400 text-xs font-bold uppercase tracking-wider border border-sky-700/60 shadow-sm">
                 <ShieldCheck className="w-4 h-4 text-sky-400" />
-                <span>Entitat Sense Ànim de Lucre · Comarques de Tarragona</span>
+                <span>Entidad Sin Ánimo de Lucro · Comarcas de Tarragona</span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                Impulsem oportunitats educatives per a la infància, l&apos;adolescència i les famílies
+                Impulsamos oportunidades educativas para la infancia, la adolescencia y las familias
               </h1>
 
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-                Entitat sense ànim de lucre compromesa amb l&apos;equitat, l&apos;orientació juvenil i la inclusió comunitària a les comarques del Baix Camp i Terres de l&apos;Ebre.
+                Entidad sin ánimo de lucro comprometida con la equidad, la orientación juvenil y la inclusión comunitaria en el Baix Camp y Terres de l&apos;Ebre.
               </p>
 
-              {/* Botons d'Acció */}
+              {/* Botones de Acción */}
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <Link
-                  href="/bruixola"
+                  href="/es/proyecto-bruixola"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-500/25 transition-all text-sm group"
                 >
                   <Compass className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-                  <span>Projecte Brúixola</span>
+                  <span>Proyecto Brúixola</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
 
                 <Link
-                  href="/donar"
+                  href="/es/donar"
                   className="inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 text-white font-bold px-5 py-3.5 rounded-xl transition-all text-sm shadow-md"
                 >
                   <Heart className="w-4 h-4 fill-white" />
-                  <span>Donar i Col·laborar</span>
+                  <span>Donar y Colaborar</span>
                 </Link>
 
                 <Link
-                  href="/voluntariat"
+                  href="/es/voluntariado"
                   className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-semibold px-5 py-3.5 rounded-xl border border-slate-700 transition-all text-sm"
                 >
                   <HeartHandshake className="w-4 h-4 text-teal-400" />
-                  <span>Uneix-te</span>
+                  <span>Únete</span>
                 </Link>
               </div>
 
-              {/* Badges de Garantia Social */}
+              {/* Badges de Garantía Social */}
               <div className="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ 100% Gratuït</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Accés Obert i Universal</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Aconfessional i Inclusiu</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ 100% Gratuito</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Acceso Abierto y Universal</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Aconfesional e Inclusivo</span>
               </div>
             </div>
 
-            {/* Columna Foto d'Equip Lluminosa i 100% Visible */}
+            {/* Columna Foto de Equipo Luminosa y 100% Visible */}
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden border-2 border-slate-700/80 shadow-2xl bg-slate-900 group">
                 <div className="relative aspect-[4/3] sm:aspect-[16/11] w-full">
                   <Image
                     src="/images/hero-educafe-sea.jpg"
-                    alt="Equip de l'Associació Cristiana EducaFe"
+                    alt="Equipo de la Asociación Cristiana EducaFe"
                     fill
                     priority
                     className="object-cover object-center group-hover:scale-102 transition-transform duration-500"
@@ -89,9 +94,9 @@ export default function HomePage() {
                 </div>
                 <div className="p-3.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
                   <span className="font-bold text-white flex items-center gap-1.5">
-                    <span>👥 Equip EducaFe</span>
+                    <span>👥 Equipo EducaFe</span>
                   </span>
-                  <span className="text-teal-400 font-medium">Acció Socioeducativa a Catalunya</span>
+                  <span className="text-teal-400 font-medium">Acción Socioeducativa en Cataluña</span>
                 </div>
               </div>
             </div>
@@ -101,16 +106,16 @@ export default function HomePage() {
       </section>
 
       {/* ==================================================================== */}
-      {/* 2. SECCIÓ 3 COLUMNES D'ACCIÓ SOCIAL */}
+      {/* 2. SECCIÓN 3 COLUMNAS: ÁMBITOS DE ACCIÓN SOCIAL (ES) */}
       {/* ==================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Àmbits d&apos;Intervenció</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Ámbitos de Acción Social</span>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            Pilars de la nostra tasca socioeducativa
+            Pilares de nuestra labor socioeducativa
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Desenvolupem programes integrals per atendre les necessitats de suport, orientació i cohesió a la nostra comunitat.
+            Desarrollamos programas integrales para responder a las necesidades de apoyo, orientación y cohesión en nuestra comunidad.
           </p>
         </div>
 
@@ -123,18 +128,18 @@ export default function HomePage() {
                 🧭
               </div>
               <h3 className="text-xl font-bold text-slate-900">
-                Acompanyament Socioeducatiu
+                Acompañamiento Socioeducativo
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Atenció personalitzada, reforç competencial i orientació integral a adolescents de 12 a 18 anys en situació de vulnerabilitat per prevenir l&apos;abandonament escolar prematur.
+                Atención personalizada, refuerzo competencial y orientación integral a adolescentes de 12 a 18 años en situación de vulnerabilidad para prevenir el abandono escolar temprano.
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100">
               <Link
-                href="/bruixola"
+                href="/es/proyecto-bruixola"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 hover:text-sky-800 transition-colors"
               >
-                <span>Conèixer el Projecte Brúixola</span>
+                <span>Conocer el Proyecto Brúixola</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -147,18 +152,18 @@ export default function HomePage() {
                 👨‍👩‍👧
               </div>
               <h3 className="text-xl font-bold text-slate-900">
-                Orientació i Suport Familiar
+                Orientación y Apoyo Familiar
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Espais d&apos;Escola de Famílies, suport a la parentalitat positiva, mediació digital i eines pràctiques per afavorir el benestar i la convivència a les llars.
+                Espacios de Escuela de Familias, apoyo a la parentalidad positiva, mediación digital y herramientas prácticas para favorecer el bienestar y la convivencia en los hogares.
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100">
               <Link
-                href="/qui-som"
+                href="/es/quienes-somos"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-600 hover:text-teal-800 transition-colors"
               >
-                <span>Saber-ne més</span>
+                <span>Saber más</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -171,18 +176,18 @@ export default function HomePage() {
                 🤝
               </div>
               <h3 className="text-xl font-bold text-slate-900">
-                Xarxa Comunitària i Voluntariat
+                Red Comunitaria y Voluntariado
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Cohesió social, activitats d&apos;aprenentatge-servei (ApS) i col·laboració estreta amb Serveis Socials, centres educatius i entitats locals del territori.
+                Cohesión social, actividades de aprendizaje-servicio (ApS) y colaboración estrecha con Servicios Sociales, centros educativos y entidades locales del territorio.
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100">
               <Link
-                href="/voluntariat"
+                href="/es/voluntariado"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-900 transition-colors"
               >
-                <span>Suma&apos;t al Voluntariat</span>
+                <span>Súmate al Voluntariado</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -192,36 +197,36 @@ export default function HomePage() {
       </section>
 
       {/* ==================================================================== */}
-      {/* 3. BANNER DESTACAT DE COMPROMÍS SOCIAL I GRATUÏTAT */}
+      {/* 3. BANNER DESTACADO DE COMPROMISO SOCIAL Y GRATUIDAD */}
       {/* ==================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-950 to-sky-950 text-white border border-slate-800 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-3">
               <span className="text-xs font-bold tracking-wider uppercase text-teal-400">
-                Compromís Institucional
+                Compromiso Institucional
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                Programes d&apos;acció social 100% gratuïts, d&apos;accés obert i aconfessionals
+                Programas de acción social 100% gratuitos, de acceso abierto y aconfesionales
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                La participació a les nostres activitats no està condicionada per creences, origen o capacitat econòmica. Treballem coordinadament amb la xarxa pública per garantir la màxima equitat.
+                La participación en nuestras actividades no está condicionada por creencias, origen ni capacidad económica. Trabajamos coordinadamente con la red pública para garantizar la máxima equidad.
               </p>
             </div>
 
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
               <Link
-                href="/bruixola"
+                href="/es/proyecto-bruixola"
                 className="inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 text-white font-bold px-5 py-3 rounded-xl transition-colors text-sm shadow"
               >
-                <span>Veure el Projecte Brúixola</span>
+                <span>Ver el Proyecto Brúixola</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/voluntariat"
+                href="/es/voluntariado"
                 className="inline-flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-slate-950 font-bold px-5 py-3 rounded-xl transition-colors text-sm shadow"
               >
-                <span>Fes-te Voluntari</span>
+                <span>Hazte Voluntario</span>
               </Link>
             </div>
           </div>

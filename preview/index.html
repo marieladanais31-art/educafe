@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Associació Cristiana EducaFe | Acció Socioeducativa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 min-h-screen flex flex-col">
+
+  <!-- TOP BAR -->
+  <div class="bg-slate-900 text-slate-200 text-xs py-2 px-4 sm:px-8 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-4">
+        <span class="text-sky-400 font-semibold">🛡️ NIF: G19357789 · Reg. Generalitat nº 75881</span>
+        <span class="text-slate-300">📍 Mont-roig del Camp (Tarragona)</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="mailto:info@asociacioneducafe.org" class="text-slate-300 hover:text-white">info@asociacioneducafe.org</a>
+        <span class="text-teal-400 font-semibold">Acció Social 100% Gratuïta</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="../public/images/logo-educafe-official.png" alt="EducaFe Logo" class="h-12 w-auto object-contain" onerror="this.src='https://via.placeholder.com/180x50?text=EducaFe'" />
+      </div>
+
+      <nav class="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-700">
+        <a href="#inici" class="text-sky-600 font-bold border-b-2 border-sky-600 pb-0.5">Inici</a>
+        <a href="#quisom" class="hover:text-sky-600 transition-colors">Qui Som</a>
+        <a href="#bruixola" class="hover:text-sky-600 transition-colors">Projecte Brúixola</a>
+        <a href="#voluntariat" class="hover:text-teal-600 transition-colors">Voluntariat</a>
+        <a href="#donar" class="hover:text-rose-600 transition-colors">Donar / Col·labora</a>
+        <a href="#lopivi" class="hover:text-sky-600 transition-colors">Protecció Infància</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-slate-900 text-xs font-bold text-white">
+          <span class="text-sky-400">🌐</span>
+          <button id="btn-cat" onclick="setLanguage('ca')" class="px-2 py-0.5 rounded bg-sky-500 text-white">CAT</button>
+          <span class="text-slate-500">|</span>
+          <button id="btn-es" onclick="setLanguage('es')" class="px-2 py-0.5 rounded text-slate-400 hover:text-white">ES</button>
+        </div>
+        <a href="#donar" class="inline-flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold px-3.5 py-2.5 rounded-xl transition-all">
+          ❤️ <span id="nav-donar">Donar</span>
+        </a>
+        <a href="#voluntariat" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow hover:shadow-md transition-all">
+          🤝 <span id="nav-cta">Fes-te Voluntari</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO INSTITUCIONAL CLAR, LLUUMINÓS I AMB FOTO D'EQUIP VISIBLE -->
+  <section id="inici" class="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white pt-10 pb-16 sm:pt-14 sm:pb-20 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Columna Textos -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/90 text-sky-400 text-xs font-bold uppercase tracking-wider border border-sky-700/60 shadow-sm">
+            🛡️ <span id="hero-badge">ENTITAT SENSE ÀNIM DE LUCRE · COMARQUES DE TARRAGONA</span>
+          </div>
+
+          <h1 id="hero-title" class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Impulsem oportunitats educatives per a la infància, l'adolescència i les famílies
+          </h1>
+
+          <p id="hero-subtitle" class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+            Entitat sense ànim de lucre compromesa amb l'equitat, l'orientació juvenil i la inclusió comunitària a les comarques del Baix Camp i Terres de l'Ebre.
+          </p>
+
+          <!-- Botons d'Acció -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="#bruixola" class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-teal-500 hover:from-sky-600 hover:to-teal-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-sky-500/25 transition-all text-sm">
+              🧭 <span id="btn-hero-1">Projecte Brúixola</span> &rarr;
+            </a>
+            <a href="#donar" class="inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 text-white font-bold px-5 py-3.5 rounded-xl transition-all text-sm shadow-md">
+              ❤️ <span id="btn-hero-donate">Donar i Col·laborar</span>
+            </a>
+            <a href="#voluntariat" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-semibold px-5 py-3.5 rounded-xl border border-slate-700 transition-all text-sm">
+              🤝 <span id="btn-hero-2">Uneix-te</span>
+            </a>
+          </div>
+
+          <!-- Badges de Garantia Social -->
+          <div class="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ 100% Gratuït</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Accés Obert i Universal</span>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Aconfessional i Inclusiu</span>
+          </div>
+        </div>
+
+        <!-- Columna Foto d'Equip Lluminosa i 100% Visible -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-slate-700/80 shadow-2xl bg-slate-900 group">
+            <div class="relative aspect-[4/3] sm:aspect-[16/11] w-full">
+              <img src="../public/images/hero-educafe-sea.jpg" alt="Equip EducaFe" class="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500" />
+            </div>
+            <div class="p-3.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>👥 Equip EducaFe</span>
+              </span>
+              <span class="text-teal-400 font-medium">Acció Socioeducativa a Catalunya</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 COLUMNAS D'ACCIÓ SOCIAL -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-8 py-20">
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-14">
+      <span class="text-xs font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full border border-sky-200">Àmbits d'Acció Social</span>
+      <h2 id="sec-pilars" class="text-3xl font-extrabold text-slate-900">Pilars de la nostra tasca socioeducativa</h2>
+      <p class="text-slate-600 text-sm sm:text-base">Desenvolupem programes integrals per atendre les necessitats de suport, orientació i cohesió a la nostra comunitat.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-3xl font-bold">🧭</div>
+        <h3 id="c1-t" class="text-xl font-bold text-slate-900">Acompanyament Socioeducatiu</h3>
+        <p id="c1-d" class="text-sm text-slate-600 leading-relaxed">Atenció personalitzada, reforç competencial i orientació integral a adolescents de 12 a 18 anys en situació de vulnerabilitat.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-3xl font-bold">👨‍👩‍👧</div>
+        <h3 id="c2-t" class="text-xl font-bold text-slate-900">Orientació i Suport Familiar</h3>
+        <p id="c2-d" class="text-sm text-slate-600 leading-relaxed">Espais d'Escola de Famílies, suport a la parentalitat positiva, mediació digital i eines pràctiques per a la convivència.</p>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all space-y-4">
+        <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-3xl font-bold">🤝</div>
+        <h3 id="c3-t" class="text-xl font-bold text-slate-900">Xarxa Comunitària i Voluntariat</h3>
+        <p id="c3-d" class="text-sm text-slate-600 leading-relaxed">Cohesió social, activitats d'aprenentatge-servei (ApS) i col·laboració amb Serveis Socials i centres educatius.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUI SOM -->
+  <section id="quisom" class="bg-slate-50 py-20 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-12">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-sky-600 bg-sky-100 px-3 py-1 rounded-full">Identitat i Estatuts</span>
+        <h2 id="qs-t" class="text-3xl font-extrabold text-slate-900">Qui Som: Missió, Valors i Governança</h2>
+      </div>
+
+      <!-- FOTO HERO DE LA PÀGINA ANTERIOR (FAMILY-JAVEA) -->
+      <div class="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 h-96">
+        <img src="../public/images/family-javea.jpg" alt="Equip i famílies EducaFe" class="w-full h-full object-cover object-center" />
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent flex items-end p-6 sm:p-8">
+          <div class="text-white">
+            <div class="text-xs font-bold uppercase tracking-wider text-teal-400">Equip i Famílies</div>
+            <div class="text-xl font-bold">Comunitat EducaFe: Treball proper amb famílies i joventut</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-8 rounded-3xl bg-sky-50 border border-sky-200 space-y-3">
+        <div class="text-xs font-bold uppercase tracking-wider text-sky-800">Fins Estatutaris (Art. 2 Estatuts EducaFe)</div>
+        <blockquote id="qs-quote" class="text-lg font-medium text-slate-800 italic leading-relaxed border-l-4 border-sky-500 pl-4">
+          "Promoure el desenvolupament educatiu, personal i comunitari d'infants, adolescents i famílies en situació de vulnerabilitat social i econòmica, inspirats en valors de servei, dignitat i solidaritat."
+        </blockquote>
+      </div>
+
+      <!-- JUNTA DIRECTIVA -->
+      <div class="space-y-6 pt-4">
+        <h3 id="jd-t" class="text-2xl font-bold text-slate-900">Junta Directiva</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+            <div id="jd-r1" class="text-xs font-bold text-sky-600 uppercase">President</div>
+            <div class="text-lg font-bold text-slate-900">Elías Vidal Campalans</div>
+            <div id="jd-d1" class="text-xs text-slate-500 mt-1">Representació institucional i direcció de projectes.</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+            <div id="jd-r2" class="text-xs font-bold text-teal-600 uppercase">Secretària</div>
+            <div class="text-lg font-bold text-slate-900">Mary Claudia García Jiménez</div>
+            <div id="jd-d2" class="text-xs text-slate-500 mt-1">Gestió documental i coordinació administrativa.</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+            <div id="jd-r3" class="text-xs font-bold text-amber-600 uppercase">Tresorera / Vocal</div>
+            <div class="text-lg font-bold text-slate-900">Mariela Andrade Aparicio</div>
+            <div id="jd-d3" class="text-xs text-slate-500 mt-1">Control econòmic i rendició de comptes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTE BRUIXOLA -->
+  <section id="bruixola" class="max-w-7xl mx-auto px-4 sm:px-8 py-20 space-y-12">
+    <div class="max-w-4xl space-y-4">
+      <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-3 py-1 rounded-full border border-teal-200">Programa Integral</span>
+      <h2 id="bx-t" class="text-3xl sm:text-4xl font-extrabold text-slate-900">Projecte Brúixola: Acompanyament, Habilitats i Competència Digital</h2>
+      <p id="bx-st" class="text-slate-600 text-base leading-relaxed">Implantació pilot a <strong>Mont-roig del Camp (Baix Camp)</strong> · Programa anual de 12 mesos · 100% Gratuït.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-2">
+        <div class="text-2xl">🧭</div>
+        <h4 id="bx-e1-t" class="font-bold text-slate-900">Itinerari RUMBO (12-14 anys)</h4>
+        <p id="bx-e1-d" class="text-xs text-slate-600">Autoconeixement, gestió emocional, hàbits saludables i reforç a l'estudi.</p>
+      </div>
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-2">
+        <div class="text-2xl">🎯</div>
+        <h4 id="bx-e2-t" class="font-bold text-slate-900">Itinerari TIMÓN (15-18 anys)</h4>
+        <p id="bx-e2-d" class="text-xs text-slate-600">Orientació vocacional, presa de decisions i continuïtat a Batxillerat i FP.</p>
+      </div>
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-2">
+        <div class="text-2xl">💻</div>
+        <h4 id="bx-e3-t" class="font-bold text-slate-900">Laboratori Digital i IA Ètica</h4>
+        <p id="bx-e3-d" class="text-xs text-slate-600">Alfabetització informacional crítica, seguretat i ús ètic de la IA com a suport.</p>
+      </div>
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-2">
+        <div class="text-2xl">🌍</div>
+        <h4 id="bx-e4-t" class="font-bold text-slate-900">Anglès Funcional per a l'Equitat</h4>
+        <p id="bx-e4-d" class="text-xs text-slate-600">Capacitació comunicativa pràctica per obrir oportunitats formatives futures.</p>
+      </div>
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-2 md:col-span-2">
+        <div class="text-2xl">👨‍👩‍👧</div>
+        <h4 id="bx-e5-t" class="font-bold text-slate-900">Escola de Famílies i Aprenentatge-Servei (ApS)</h4>
+        <p id="bx-e5-d" class="text-xs text-slate-600">Trobades mensuals d'orientació parental i accions comunitàries de retorn al municipi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONAR I COL·LABORAR -->
+  <section id="donar" class="bg-rose-50/70 py-20 border-y border-rose-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-10">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-3 py-1 rounded-full border border-rose-200">Filantropia i Suport Directe</span>
+        <h2 id="dn-t" class="text-3xl font-extrabold text-slate-900">Donar i Col·laborar amb l'Acció Social</h2>
+        <p id="dn-st" class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Tots els programes són 100% gratuïts. La teva aportació filantròpica ajuda a finançar beques de transport, berenars saludables i materials didàctics per a joves en situació de vulnerabilitat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Stripe Card / Online -->
+        <div class="p-8 rounded-3xl bg-white border-2 border-sky-100 shadow-md space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span>💳 Donació Segura Online (Targeta / Apple Pay / Google Pay)</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Fes la teva aportació puntual o periòdica directament a través de la passarel·la oficial i encriptada de Stripe:
+            </p>
+            <div>
+              <a href="https://donate.stripe.com/test_educafe" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all text-sm">
+                ❤️ Fer Donació Online Segura (Stripe) &nearr;
+              </a>
+            </div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-500">
+            ✓ Rebut fiscal automàtic per a la deducció del Model 182 de l'AEAT.
+          </div>
+        </div>
+
+        <!-- Transferència Bancària -->
+        <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-md space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span>🏦 Transferència Bancària Institucional</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 text-xs text-slate-800">
+              <div><strong class="text-slate-500 uppercase">Titular:</strong> <span class="font-semibold text-slate-900">ASOCIACIÓN CRISTIANA EDUCAFE</span></div>
+              <div><strong class="text-slate-500 uppercase">NIF:</strong> <span class="font-mono font-bold text-sky-700">G19357789</span></div>
+              <div><strong class="text-slate-500 uppercase">IBAN:</strong> <span class="font-mono font-bold text-xs bg-white px-2 py-1 rounded border border-slate-300 block mt-1 select-all">ES84 0182 4315 7002 0158 8175</span></div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500">Desgravació fiscal en IRPF / IS sol·licitant el certificat a info@asociacioneducafe.org.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTARIAT I FORMULARI -->
+  <section id="voluntariat" class="max-w-7xl mx-auto px-4 sm:px-8 py-20 space-y-12">
+    <div class="max-w-3xl space-y-3">
+      <span class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-100 px-3 py-1 rounded-full">Uneix-te a l'Equip</span>
+      <h2 id="vol-t" class="text-3xl font-extrabold text-slate-900">Voluntariat i Participació Comunitària</h2>
+      <p id="vol-st" class="text-slate-600 text-sm sm:text-base">El voluntariat és el motor de la nostra acció social. Suma el teu talent per acompanyar infants i adolescents.</p>
+    </div>
+
+    <!-- FORMULARI DIRECTE -->
+    <div class="max-w-3xl mx-auto p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-6">
+      <div class="border-b border-slate-100 pb-4">
+        <h3 id="vf-t" class="text-xl font-bold text-slate-900">Formulari d'Inscripció al Voluntariat</h3>
+        <p id="vf-d" class="text-xs text-slate-500 mt-1">Ens posarem en contacte amb tu per acompanyar-te en el procés d'incorporació.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+        <div>
+          <label id="lbl-name" class="font-bold uppercase text-slate-700 block mb-1">Nom i Cognoms *</label>
+          <input type="text" placeholder="El teu nom" class="w-full p-3 rounded-xl border border-slate-300 bg-slate-50 text-sm" />
+        </div>
+        <div>
+          <label id="lbl-email" class="font-bold uppercase text-slate-700 block mb-1">Correu Electrònic *</label>
+          <input type="email" placeholder="nom@exemple.org" class="w-full p-3 rounded-xl border border-slate-300 bg-slate-50 text-sm" />
+        </div>
+        <div>
+          <label id="lbl-tel" class="font-bold uppercase text-slate-700 block mb-1">Telèfon *</label>
+          <input type="tel" placeholder="600 000 000" class="w-full p-3 rounded-xl border border-slate-300 bg-slate-50 text-sm" />
+        </div>
+        <div>
+          <label id="lbl-area" class="font-bold uppercase text-slate-700 block mb-1">Àmbit d'Interès</label>
+          <select class="w-full p-3 rounded-xl border border-slate-300 bg-slate-50 text-sm">
+            <option>Mentoria i Reforç Escolar</option>
+            <option>Dinamització Digital i IA</option>
+            <option>Suport Familiar i Comunitari</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-3">
+        <label class="flex items-start gap-2 cursor-pointer">
+          <input type="checkbox" checked class="mt-0.5 text-teal-600 rounded" />
+          <span id="lbl-lopivi">Accepto el compromís d'Entorn Segur (LOPIVI) i certificat negatiu de delictes sexuals.</span>
+        </label>
+      </div>
+
+      <a href="mailto:info@asociacioneducafe.org?subject=Inscripció%20Voluntariat%20EducaFe" class="w-full inline-flex justify-center items-center gap-2 bg-gradient-to-r from-teal-600 to-sky-600 text-white font-bold py-3.5 rounded-xl text-sm shadow hover:shadow-lg transition-all">
+        ✉️ <span id="btn-send-vol">Enviar Sol·licitud per Email</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- LOPIVI -->
+  <section id="lopivi" class="max-w-7xl mx-auto px-4 sm:px-8 py-20 space-y-8">
+    <div class="p-8 sm:p-12 rounded-3xl bg-slate-900 text-white border border-slate-800 space-y-6">
+      <div class="space-y-3 max-w-3xl">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Entorn Segur · LOPIVI</span>
+        <h2 id="lp-t" class="text-3xl font-extrabold">Compromís amb la Protecció a la Infància</h2>
+        <p id="lp-d" class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Compliment estricte de la Llei Orgànica 8/2021 (LOPIVI). Comptem amb Delegada de Protecció (Treball Social) i certificació negativa del Registre Central de Delinqüents Sexuals per a tot el personal.
+        </p>
+      </div>
+
+      <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="mailto:proteccio@asociacioneducafe.org" class="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-slate-950 font-bold px-5 py-3 rounded-xl text-sm shadow">
+          ✉️ proteccio@asociacioneducafe.org
+        </a>
+        <span id="lp-sub" class="text-xs text-slate-400">Canal confidencial i segur per a menors i famílies.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <div class="space-y-3">
+          <div class="font-bold text-lg text-white">Associació Cristiana EducaFe</div>
+          <div class="text-xs text-slate-400 space-y-1">
+            <div>NIF: G19357789 · Registre Generalitat núm. 75881</div>
+            <div>Seu: Mont-roig del Camp (Baix Camp, Tarragona)</div>
+            <div>Email: <a href="mailto:info@asociacioneducafe.org" class="text-sky-300">info@asociacioneducafe.org</a></div>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-bold text-sm text-white">Legalitat i Protecció</div>
+          <div class="flex flex-col space-y-2 text-xs text-slate-300">
+            <a href="#inici" class="hover:text-sky-300">Avís Legal i Privacitat (RGPD)</a>
+            <a href="#lopivi" class="hover:text-sky-300">Protocol Entorn Segur (LOPIVI)</a>
+            <a href="#voluntariat" class="hover:text-sky-300">Pla de Voluntariat</a>
+            <a href="#donar" class="hover:text-sky-300">Donacions Solidàries</a>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div class="font-bold text-sm text-white">Àmbit d'Aprenentatge</div>
+          <p class="text-xs text-slate-400">Plataforma de coordinació i recursos educatius:</p>
+          <a href="https://red.asociacioneducafe.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-sky-300 hover:text-white transition-all">
+            <span>Accés al Campus / Xarxa Educativa</span> &nearr;
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex justify-between text-xs text-slate-500">
+        <div>© 2026 Associació Cristiana EducaFe · Entitat sense ànim de lucre.</div>
+        <div>Mont-roig del Camp (Tarragona)</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      ca: {
+        navDonar: 'Donar',
+        navCta: 'Fes-te Voluntari',
+        heroBadge: 'ENTITAT SENSE ÀNIM DE LUCRE · COMARQUES DE TARRAGONA',
+        heroTitle: 'Impulsem oportunitats educatives per a la infància, l'adolescència i les famílies',
+        heroSubtitle: 'Entitat sense ànim de lucre compromesa amb l'equitat, l'orientació juvenil i la inclusió comunitària a les comarques del Baix Camp i Terres de l'Ebre.',
+        btnHero1: 'Projecte Brúixola',
+        btnHeroDonate: 'Donar i Col·laborar',
+        btnHero2: 'Uneix-te com a Voluntari',
+        secPilars: 'Pilars de la nostra tasca socioeducativa',
+        c1t: 'Acompanyament Socioeducatiu',
+        c1d: 'Atenció personalitzada, reforç competencial i orientació integral a adolescents de 12 a 18 anys en situació de vulnerabilitat.',
+        c2t: 'Orientació i Suport Familiar',
+        c2d: 'Espais d'Escola de Famílies, suport a la parentalitat positiva, mediació digital i eines pràctiques per a la convivència.',
+        c3t: 'Xarxa Comunitària i Voluntariat',
+        c3d: 'Cohesió social, activitats d'aprenentatge-servei (ApS) i col·laboració amb Serveis Socials i centres educatius.',
+        qsT: 'Qui Som: Missió, Valors i Governança',
+        qsQuote: '"Promoure el desenvolupament educatiu, personal i comunitari d'infants, adolescents i famílies en situació de vulnerabilitat social i econòmica, inspirats en valors de servei, dignitat i solidaritat."',
+        jdT: 'Junta Directiva',
+        jdR1: 'President', jdD1: 'Representació institucional i direcció de projectes.',
+        jdR2: 'Secretària', jdD2: 'Gestió documental i coordinació administrativa.',
+        jdR3: 'Tresorera / Vocal', jdD3: 'Control econòmic i rendició de comptes.',
+        bxT: 'Projecte Brúixola: Acompanyament, Habilitats i Competència Digital',
+        bxSt: 'Implantació pilot a Mont-roig del Camp (Baix Camp) · Programa anual de 12 mesos · 100% Gratuït.',
+        bxE1T: 'Itinerari RUMBO (12-14 anys)', bxE1D: 'Autoconeixement, gestió emocional, hàbits saludables i reforç a l'estudi.',
+        bxE2T: 'Itinerari TIMÓN (15-18 anys)', bxE2D: 'Orientació vocacional, presa de decisions i continuïtat a Batxillerat i FP.',
+        bxE3T: 'Laboratori Digital i IA Ètica', bxE3D: 'Alfabetització informacional crítica, seguretat i ús ètic de la IA com a suport.',
+        bxE4T: 'Anglès Funcional per a l'Equitat', bxE4D: 'Capacitació comunicativa pràctica per obrir oportunitats formatives futures.',
+        bxE5T: 'Escola de Famílies i Aprenentatge-Servei (ApS)', bxE5D: 'Trobades mensuals d'orientació parental i accions comunitàries de retorn al municipi.',
+        dnT: 'Donar i Col·laborar amb l'Acció Social',
+        dnSt: 'Tots els programes són 100% gratuïts. La teva aportació filantròpica ajuda a finançar beques de transport, berenars saludables i materials didàctics.',
+        volT: 'Voluntariat i Participació Comunitària',
+        volSt: 'El voluntariat és el motor de la nostra acció social. Suma el teu talent per acompanyar infants i adolescents.',
+        vfT: 'Formulari d'Inscripció al Voluntariat',
+        vfD: 'Ens posarem en contacte amb tu per acompanyar-te en el procés d'incorporació.',
+        lblName: 'Nom i Cognoms *', lblEmail: 'Correu Electrònic *', lblTel: 'Telèfon *', lblArea: 'Àmbit d'Interès',
+        lblLopivi: 'Accepto el compromís d'Entorn Segur (LOPIVI) i certificat negatiu de delictes sexuals.',
+        btnSendVol: 'Enviar Sol·licitud per Email',
+        lpT: 'Compromís amb la Protecció a la Infància',
+        lpD: 'Compliment estricte de la Llei Orgànica 8/2021 (LOPIVI). Comptem amb Delegada de Protecció (Treball Social) i certificació negativa del Registre Central de Delinqüents Sexuals per a tot el personal.',
+        lpSub: 'Canal confidencial i segur per a menors i famílies.'
+      },
+      es: {
+        navDonar: 'Donar',
+        navCta: 'Hazte Voluntario',
+        heroBadge: 'ENTIDAD SIN ÁNIMO DE LUCRO · COMARCAS DE TARRAGONA',
+        heroTitle: 'Impulsamos oportunidades educativas para la infancia, la adolescencia y las familias',
+        heroSubtitle: 'Entidad sin ánimo de lucro comprometida con la equidad, la orientación juvenil y la inclusión comunitaria en el Baix Camp y Terres de l'Ebre.',
+        btnHero1: 'Proyecto Brúixola',
+        btnHeroDonate: 'Donar y Colaborar',
+        btnHero2: 'Únete como Voluntario',
+        secPilars: 'Pilares de nuestra labor socioeducativa',
+        c1t: 'Acompañamiento Socioeducativo',
+        c1d: 'Atención, refuerzo competencial y orientación integral para adolescentes en situación de vulnerabilidad.',
+        c2t: 'Orientación Familiar',
+        c2d: 'Apoyo a los hogares, parentalidad positiva, mediación digital y acompañamiento al estudio.',
+        c3t: 'Red Comunitaria',
+        c3d: 'Cohesión social, trabajo en red con el territorio, aprendizaje-servicio y voluntariado.',
+        qsT: 'Quiénes Somos: Identidad, Misión y Valores',
+        qsQuote: '"Promover el desarrollo educativo, personal y comunitario de niños, adolescentes y familias, con atención preferente a quienes se encuentran en situación de vulnerabilidad social y económica, inspirados en valores de servicio, dignidad y solidaridad."',
+        jdT: 'Junta Directiva',
+        jdR1: 'Presidente', jdD1: 'Representación institucional y dirección estratégica de proyectos.',
+        jdR2: 'Secretaria', jdD2: 'Gestión documental, actas y coordinación administrativa.',
+        jdR3: 'Tesorera / Vocal', jdD3: 'Control económico, rendición de cuentas y apoyo metodológico.',
+        bxT: 'Proyecto Brúixola: Acompañamiento, Habilidades y Competencia Digital',
+        bxSt: 'Implantación piloto en Mont-roig del Camp (Baix Camp) · Programa anual de 12 meses · 100% Gratuito.',
+        bxE1T: 'Itinerario RUMBO (12-14 años)', bxE1D: 'Autoconocimiento, gestión emocional, hábitos de vida saludables y refuerzo al estudio.',
+        bxE2T: 'Itinerario TIMÓN (15-18 años)', bxE2D: 'Orientación vocacional, toma de decisiones y prevención del desenganche hacia Bachillerato y FP.',
+        bxE3T: 'Laboratorio Digital e IA Responsable', bxE3D: 'Alfabetización informacional crítica, seguridad digital y uso ético de la IA como herramienta de estudio.',
+        bxE4T: 'Inglés Funcional para la Equidad', bxE4D: 'Capacitación comunicativa práctica para la equidad curricular y formativa.',
+        bxE5T: 'Escuela de Familias y Aprendizaje-Servicio (ApS)', bxE5D: 'Encuentros mensuales con familias y salidas de retorno comunitario al municipio.',
+        dnT: 'Donar y Colaborar con la Acción Social',
+        dnSt: 'Todos los programas son 100% gratuitos. Tu aportación filantrópica ayuda a financiar becas de transporte, meriendas saludables y materiales didácticos.',
+        volT: 'Voluntariado y Participación Comunitaria',
+        volSt: 'El voluntariado es el motor de nuestra acción social. Suma tu talento para acompañar a niños y jóvenes.',
+        vfT: 'Formulario de Inscripción al Voluntariado',
+        vfD: 'Nos pondremos en contacto contigo para acompañarte en el proceso de incorporación.',
+        lblName: 'Nombre y Apellidos *', lblEmail: 'Correo Electrónico *', lblTel: 'Teléfono *', lblArea: 'Área de Interés',
+        lblLopivi: 'Acepto el compromiso de Entorno Seguro (LOPIVI) y certificado negativo de delitos sexuales.',
+        btnSendVol: 'Enviar Solicitud por Email',
+        lpT: 'Compromiso con la Protección a la Infancia y la Adolescencia',
+        lpD: 'Protocolo de Entorno Seguro conforme a la LOPIVI (Ley Orgánica 8/2021). Delegada de Protección colegiada en Trabajo Social y certificación preceptiva del Registro Central de Delincuentes Sexuales.',
+        lpSub: 'Canal confidencial y seguro para menores y familias.'
+      }
+    };
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById('nav-donar').innerText = t.navDonar;
+      document.getElementById('nav-cta').innerText = t.navCta;
+      document.getElementById('hero-badge').innerText = t.heroBadge;
+      document.getElementById('hero-title').innerText = t.heroTitle;
+      document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
+      document.getElementById('btn-hero-1').innerText = t.btnHero1;
+      document.getElementById('btn-hero-donate').innerText = t.btnHeroDonate;
+      document.getElementById('btn-hero-2').innerText = t.btnHero2;
+      document.getElementById('sec-pilars').innerText = t.secPilars;
+      document.getElementById('c1-t').innerText = t.c1t;
+      document.getElementById('c1-d').innerText = t.c1d;
+      document.getElementById('c2-t').innerText = t.c2t;
+      document.getElementById('c2-d').innerText = t.c2d;
+      document.getElementById('c3-t').innerText = t.c3t;
+      document.getElementById('c3-d').innerText = t.c3d;
+      document.getElementById('qs-t').innerText = t.qsT;
+      document.getElementById('qs-quote').innerText = t.qsQuote;
+      document.getElementById('jd-t').innerText = t.jdT;
+      document.getElementById('jd-r1').innerText = t.jdR1; document.getElementById('jd-d1').innerText = t.jdD1;
+      document.getElementById('jd-r2').innerText = t.jdR2; document.getElementById('jd-d2').innerText = t.jdD2;
+      document.getElementById('jd-r3').innerText = t.jdR3; document.getElementById('jd-d3').innerText = t.jdD3;
+      document.getElementById('bx-t').innerText = t.bxT;
+      document.getElementById('bx-st').innerHTML = t.bxSt;
+      document.getElementById('bx-e1-t').innerText = t.bxE1T; document.getElementById('bx-e1-d').innerText = t.bxE1D;
+      document.getElementById('bx-e2-t').innerText = t.bxE2T; document.getElementById('bx-e2-d').innerText = t.bxE2D;
+      document.getElementById('bx-e3-t').innerText = t.bxE3T; document.getElementById('bx-e3-d').innerText = t.bxE3D;
+      document.getElementById('bx-e4-t').innerText = t.bxE4T; document.getElementById('bx-e4-d').innerText = t.bxE4D;
+      document.getElementById('bx-e5-t').innerText = t.bxE5T; document.getElementById('bx-e5-d').innerText = t.bxE5D;
+      document.getElementById('dn-t').innerText = t.dnT;
+      document.getElementById('dn-st').innerText = t.dnSt;
+      document.getElementById('vol-t').innerText = t.volT;
+      document.getElementById('vol-st').innerText = t.volSt;
+      document.getElementById('vf-t').innerText = t.vfT;
+      document.getElementById('vf-d').innerText = t.vfD;
+      document.getElementById('lbl-name').innerText = t.lblName;
+      document.getElementById('lbl-email').innerText = t.lblEmail;
+      document.getElementById('lbl-tel').innerText = t.lblTel;
+      document.getElementById('lbl-area').innerText = t.lblArea;
+      document.getElementById('lbl-lopivi').innerText = t.lblLopivi;
+      document.getElementById('btn-send-vol').innerText = t.btnSendVol;
+      document.getElementById('lp-t').innerText = t.lpT;
+      document.getElementById('lp-d').innerText = t.lpD;
+      document.getElementById('lp-sub').innerText = t.lpSub;
+
+      if (lang === 'ca') {
+        document.getElementById('btn-cat').className = 'px-2 py-0.5 rounded bg-sky-500 text-white';
+        document.getElementById('btn-es').className = 'px-2 py-0.5 rounded text-slate-400 hover:text-white';
+      } else {
+        document.getElementById('btn-es').className = 'px-2 py-0.5 rounded bg-sky-500 text-white';
+        document.getElementById('btn-cat').className = 'px-2 py-0.5 rounded text-slate-400 hover:text-white';
+      }
+    }
+  </script>
+</body>
+</html>

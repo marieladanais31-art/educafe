@@ -3,35 +3,66 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ArrowRight, HeartHandshake, ShieldCheck, MapPin } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { Menu, X, ShieldCheck, MapPin, HeartHandshake, Heart } from 'lucide-react';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isEs = pathname?.startsWith('/es');
+
+  // Navigation items including Voluntariado & Donar
+  const navItems = isEs
+    ? [
+        { label: 'Inicio', href: '/es' },
+        { label: 'Quiénes Somos', href: '/es/quienes-somos' },
+        { label: 'Proyecto Brúixola', href: '/es/proyecto-bruixola' },
+        { label: 'Voluntariado', href: '/es/voluntariado' },
+        { label: 'Donar / Colabora', href: '/es/donar' },
+        { label: 'Protección a la Infancia', href: '/es/proteccion-infancia' },
+      ]
+    : [
+        { label: 'Inici', href: '/' },
+        { label: 'Qui Som', href: '/qui-som' },
+        { label: 'Projecte Brúixola', href: '/bruixola' },
+        { label: 'Voluntariat', href: '/voluntariat' },
+        { label: 'Donar / Col·labora', href: '/donar' },
+        { label: 'Protecció a la Infància', href: '/proteccio-infancia' },
+      ];
+
+  const volunteerText = isEs ? 'Hazte Voluntario' : 'Fes-te Voluntari';
+  const volunteerHref = isEs ? '/es/voluntariado' : '/voluntariat';
+  const donateText = isEs ? 'Donar' : 'Donar';
+  const donateHref = isEs ? '/es/donar' : '/donar';
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm transition-all">
       
-      {/* Top Bar for Contact & Institutional Credibility */}
+      {/* Top Bar for Institutional Credibility */}
       <div className="bg-slate-900 text-slate-200 text-xs py-1.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800 hidden sm:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-sky-400 font-medium">
               <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
-              <span>NIF: G19357789 · Reg. nº 75881</span>
+              <span>NIF: G19357789 · Registre Generalitat nº 75881</span>
             </span>
             <span className="text-slate-300 font-medium flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5 text-sky-400" />
-              <span>Mont-Roig del Camp, Tarragona</span>
+              <span>Mont-roig del Camp (Baix Camp, Tarragona)</span>
             </span>
           </div>
 
-          <div className="flex items-center gap-6">
-            <a href="mailto:info@asociacioneducafe.org" className="hover:text-white transition-colors font-bold text-sky-300">
+          <div className="flex items-center gap-5">
+            <a
+              href="mailto:info@asociacioneducafe.org"
+              className="hover:text-white transition-colors text-slate-300 hover:underline"
+            >
               info@asociacioneducafe.org
             </a>
-            <span className="text-amber-400 font-semibold flex items-center gap-1">
-              <span>★ Partner Metodológico:</span>
-              <span className="text-slate-200 font-normal">Chanak International Academy</span>
+            <span className="text-slate-600">|</span>
+            <span className="text-teal-400 font-medium text-xs">
+              {isEs ? 'Acción Social 100% Gratuita' : 'Acció Social 100% Gratuïta'}
             </span>
           </div>
         </div>
@@ -40,73 +71,75 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo & Branding - Larger EducaFe Logo */}
-          <Link href="/" className="flex items-center gap-4 group">
+          {/* Logo */}
+          <Link href={isEs ? '/es' : '/'} className="flex items-center gap-3 group">
             <div className="relative h-14 w-auto flex items-center">
               <Image
                 src="/images/logo-educafe-official.png"
-                alt="Asociación EducaFe Logo"
-                width={240}
-                height={65}
-                className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform"
+                alt="Associació Cristiana EducaFe Logo"
+                width={220}
+                height={60}
+                className="h-11 sm:h-13 w-auto object-contain group-hover:scale-102 transition-transform"
                 priority
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7">
-            <Link href="/" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">
-              Inicio
-            </Link>
-            <Link href="/quienes-somos" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">
-              Quiénes Somos
-            </Link>
-            <Link href="/#mision" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">
-              Impacto Social
-            </Link>
-            <Link href="/#programas" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">
-              Programas
-            </Link>
-            <Link href="/#comunidad" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">
-              Espacio Comunitario
-            </Link>
-            <Link href="/unete" className="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">
-              Alianzas
-            </Link>
+          <nav className="hidden xl:flex items-center gap-6">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-semibold transition-colors ${
+                    isActive
+                      ? 'text-sky-600 font-bold border-b-2 border-sky-600 pb-0.5'
+                      : 'text-slate-700 hover:text-sky-600'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
-          {/* Chanak Logo Badge + CTA Desktop */}
-          <div className="hidden md:flex items-center gap-4">
-            <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200">
-              <Image
-                src="/images/logo-chanak-official.jpg"
-                alt="Chanak Logo"
-                width={36}
-                height={36}
-                className="h-8 w-8 object-contain rounded-md"
-              />
-              <div className="flex flex-col text-left">
-                <span className="text-[9px] font-bold text-amber-700 uppercase tracking-wider">Partner</span>
-                <span className="text-xs font-semibold text-slate-800">Chanak Academy</span>
-              </div>
-            </div>
+          {/* Action Buttons & Language Switcher */}
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageSwitcher />
 
             <Link
-              href="/unete"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white text-xs font-bold px-5 py-3 rounded-xl shadow-md hover:shadow-sky-500/20 transition-all group"
+              href={donateHref}
+              className="inline-flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold px-3.5 py-2.5 rounded-xl transition-all"
             >
-              <span>Colaborar</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
+              <span>{donateText}</span>
+            </Link>
+
+            <Link
+              href={volunteerHref}
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all group"
+            >
+              <HeartHandshake className="w-4 h-4 group-hover:scale-110 transition-transform" />
+              <span>{volunteerText}</span>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex lg:hidden">
+          {/* Mobile Menu Button & Lang Switcher */}
+          <div className="flex items-center gap-2 xl:hidden">
+            <LanguageSwitcher />
+            <Link
+              href={donateHref}
+              className="inline-flex items-center gap-1 bg-rose-50 text-rose-700 border border-rose-200 text-xs font-bold px-2.5 py-1.5 rounded-lg"
+            >
+              <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
+              <span>{donateText}</span>
+            </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
-              aria-label="Abrir menú"
+              aria-label="Menú"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -116,57 +149,37 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
-          <Link
-            href="/"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-50"
-          >
-            Inicio
-          </Link>
-          <Link
-            href="/quienes-somos"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-50"
-          >
-            Quiénes Somos
-          </Link>
-          <Link
-            href="/#mision"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-50"
-          >
-            Impacto Social
-          </Link>
-          <Link
-            href="/#programas"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-50"
-          >
-            Programas
-          </Link>
-          <Link
-            href="/#comunidad"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-50"
-          >
-            Espacio Comunitario
-          </Link>
-          <Link
-            href="/unete"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-50"
-          >
-            Alianzas y Voluntariado
-          </Link>
-          <div className="pt-2">
+        <div className="xl:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+          {navItems.map((item) => (
             <Link
-              href="/unete"
+              key={item.href}
+              href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full inline-flex justify-center items-center gap-2 bg-sky-600 text-white font-bold px-4 py-3 rounded-xl text-center shadow-md"
+              className={`block px-3 py-2.5 rounded-xl text-base font-semibold transition-colors ${
+                pathname === item.href
+                  ? 'bg-sky-50 text-sky-700 font-bold'
+                  : 'text-slate-800 hover:bg-slate-50'
+              }`}
             >
-              <HeartHandshake className="w-5 h-5" />
-              <span>Colabora con Nosotros</span>
+              {item.label}
+            </Link>
+          ))}
+          <div className="pt-3 grid grid-cols-2 gap-2">
+            <Link
+              href={donateHref}
+              onClick={() => setMobileMenuOpen(false)}
+              className="inline-flex justify-center items-center gap-1.5 bg-rose-50 text-rose-700 border border-rose-300 font-bold px-3 py-2.5 rounded-xl text-sm text-center"
+            >
+              <Heart className="w-4 h-4 fill-rose-500 text-rose-500" />
+              <span>{donateText}</span>
+            </Link>
+            <Link
+              href={volunteerHref}
+              onClick={() => setMobileMenuOpen(false)}
+              className="inline-flex justify-center items-center gap-1.5 bg-gradient-to-r from-sky-600 to-teal-600 text-white font-bold px-3 py-2.5 rounded-xl text-sm text-center shadow"
+            >
+              <HeartHandshake className="w-4 h-4" />
+              <span>{volunteerText}</span>
             </Link>
           </div>
         </div>

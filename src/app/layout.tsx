@@ -1,71 +1,47 @@
 import type { Metadata } from 'next';
-import { Outfit, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const outfit = Outfit({
-  subsets: ['latin'],
-  variable: '--font-outfit',
-  display: 'swap',
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.asociacioneducafe.org'),
   title: {
-    default: 'Asociación EducaFe | Hub de Innovación Social, Empleabilidad y Life Skills',
-    template: '%s | Asociación EducaFe',
+    default: 'Associació Cristiana EducaFe | Acció Socioeducativa i Equitat Juvenil',
+    template: '%s | Associació Cristiana EducaFe',
   },
   description:
-    'ASOCIACIÓN CRISTIANA EDUCAFE (NIF G19357789). Hub de Innovación Social en Cataluña enfocado en capacitación tecnológica (IA), sostenibilidad (Green Hub), bienestar (Life Skills) y alianza con Chanak International Academy.',
+    'Associació Cristiana EducaFe (NIF G19357789 · Registre Generalitat núm. 75881). Entitat sense ànim de lucre compromesa amb l\'equitat, l\'orientació juvenil (Projecte Brúixola), suport familiar i inclusió a les comarques de Tarragona.',
   keywords: [
-    'Asociación EducaFe',
+    'Associació Cristiana EducaFe',
     'NIF G19357789',
-    'Innovación Social Cataluña',
-    'Life Skills jóvenes',
-    'Empleabilidad juvenil',
-    'Capacitación Inteligencia Artificial',
-    'Chanak International Academy',
-    'Dual Diploma España',
-    'Prevención fracaso escolar',
-    'El Perelló Tarragona',
+    'Projecte Brúixola',
+    'Acció socioeducativa Tarragona',
+    'Mont-roig del Camp',
+    'Suport familiar i parentalitat positiva',
+    'Orientació juvenil Baix Camp',
+    'Protecció a la infància LOPIVI',
+    'Transparència associacions Catalunya',
   ],
-  authors: [{ name: 'ASOCIACIÓN CRISTIANA EDUCAFE' }],
-  creator: 'ASOCIACIÓN CRISTIANA EDUCAFE',
-  publisher: 'ASOCIACIÓN CRISTIANA EDUCAFE',
+  authors: [{ name: 'Associació Cristiana EducaFe' }],
+  creator: 'Associació Cristiana EducaFe',
+  publisher: 'Associació Cristiana EducaFe',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: 'Asociación EducaFe | Hub de Innovación Social y Desarrollo Juvenil',
+    title: 'Associació Cristiana EducaFe | Acció Socioeducativa i Equitat Juvenil',
     description:
-      'Impulsamos el talento juvenil, la empleabilidad y el bienestar integral a través de la tecnología, la sostenibilidad y las competencias emocionales en Cataluña.',
+      'Impulsem oportunitats educatives per a la infància, l\'adolescència i les famílies a les comarques de Tarragona. Programes gratuïts, d\'accés obert i aconfessionals.',
     url: 'https://www.asociacioneducafe.org',
-    siteName: 'Asociación EducaFe',
-    locale: 'es_ES',
+    siteName: 'Associació Cristiana EducaFe',
+    locale: 'ca_ES',
     type: 'website',
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'YOUR_GOOGLE_SEARCH_CONSOLE_CODE_HERE',
   },
 };
 
@@ -76,42 +52,35 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    name: 'ASOCIACIÓN CRISTIANA EDUCAFE',
+    '@type': 'NGO',
+    name: 'Associació Cristiana EducaFe',
+    legalName: 'ASOCIACIÓN CRISTIANA EDUCAFE',
     taxID: 'G19357789',
+    identifier: '75881',
     url: 'https://www.asociacioneducafe.org',
     logo: 'https://www.asociacioneducafe.org/images/logo-educafe-official.png',
     email: 'info@asociacioneducafe.org',
     description:
-      'Hub de Innovación Social, Empleabilidad, Sostenibilidad y Habilidades para la Vida (Life Skills) impulsando el talento juvenil y la prevención del fracaso escolar en Cataluña.',
+      'Entitat sense ànim de lucre dedicada a l\'acompanyament socioeducatiu, suport a les famílies i inclusió comunitària.',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Mont-Roig del Camp',
+      addressLocality: 'Mont-roig del Camp',
       addressRegion: 'Tarragona',
       addressCountry: 'ES',
     },
-    sameAs: ['https://www.asociacioneducafe.org'],
-    knowsAbout: [
-      'Innovación Social',
-      'Life Skills',
-      'Inteligencia Artificial',
-      'Sostenibilidad',
-      'Chanak International Academy',
-      'Dual Diploma',
-    ],
   };
 
   return (
-    <html lang="es" className={`${outfit.variable} ${inter.variable} scroll-smooth`}>
+    <html lang="ca" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased bg-slate-950 text-slate-100 selection:bg-sky-500 selection:text-white">
+      <body className="min-h-screen flex flex-col antialiased bg-slate-950 text-slate-100 selection:bg-sky-500 selection:text-white font-sans">
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow bg-white text-slate-900">{children}</main>
         <Footer />
       </body>
     </html>

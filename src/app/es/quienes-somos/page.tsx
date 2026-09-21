@@ -31,8 +31,8 @@ export default function EsQuienesSomosPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[16/9]">
           <Image
-            src="/images/family-javea.jpg"
-            alt="Comunidad, familias y equipo de la Asociación EducaFe"
+            src="/images/comunitat-joves-taller.jpg"
+            alt="Acción socioeducativa, talleres y acompañamiento a jóvenes y familias"
             fill
             className="object-cover object-center"
             sizes="(max-width: 1200px) 100vw, 1200px"

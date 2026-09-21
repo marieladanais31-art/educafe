@@ -35,12 +35,12 @@ export default function EsVoluntariadoPage() {
 
       {/* Foto del Equipo */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[21/9]">
+        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-white aspect-[16/9]">
           <Image
             src="/images/team-educafe-lineup.jpg"
             alt="Equipo de voluntariado y profesionales de la Asociación EducaFe"
             fill
-            className="object-cover object-center"
+            className="object-contain object-center"
             sizes="(max-width: 1200px) 100vw, 1200px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6 sm:p-8">
@@ -71,7 +71,7 @@ export default function EsVoluntariadoPage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Mentoría y Apoyo al Estudio</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Acompañamiento personalizado a jóvenes del Proyecto Brúixola, refuerzo escolar, motivación formativa y desarrollo de autonomía personal.
+              Posibles tareas de apoyo al estudio, motivación formativa y desarrollo de la autonomía personal en las iniciativas que se activen.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function EsVoluntariadoPage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Dinamización Digital e IA</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Colaboración en talleres de competencia digital, pensamiento crítico y uso ético de tecnologías para reducir la brecha digital.
+              Posible apoyo en actividades de competencia digital, pensamiento crítico y uso responsable de herramientas tecnológicas.
             </p>
           </div>
 
@@ -91,7 +91,7 @@ export default function EsVoluntariadoPage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Apoyo Comunitario y Familiar</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Participación en encuentros de familias, salidas y actividades comunitarias de aprendizaje-servicio (ApS) en el municipio.
+              Participación en encuentros de familias, actividades educativas y apoyo logístico según las necesidades confirmadas de la asociación.
             </p>
           </div>
 
@@ -106,7 +106,7 @@ export default function EsVoluntariadoPage() {
             <span>Garantías del Voluntariado y Entorno Seguro (Ley 45/2015 y LOPIVI)</span>
           </div>
           <p className="text-sm text-slate-700 leading-relaxed">
-            La entidad cuenta con un <strong>Plan de Voluntariado estructurado</strong> que contempla acuerdo de voluntariado, cobertura de seguro de accidentes y responsabilidad civil, formación inicial y acompañamiento.
+            Antes de cualquier incorporación se formalizarán las condiciones correspondientes, incluidos el acuerdo de voluntariado, las coberturas exigibles, la formación inicial y el acompañamiento.
           </p>
           <p className="text-sm text-slate-700 leading-relaxed">
             En cumplimiento estricto de la LOPIVI, es requisito preceptivo presentar el <strong>Certificado Negativo del Registro Central de Delincuentes Sexuales y de Trata</strong> antes de incorporarse a actividades con menores.

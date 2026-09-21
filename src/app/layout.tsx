@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Associació Cristiana EducaFe | Acció Socioeducativa i Equitat Juvenil',
     description:
-      'Impulsem oportunitats educatives per a la infància, l\'adolescència i les famílies a les comarques de Tarragona. Programes gratuïts, d\'accés obert i aconfessionals.',
+      'Impulsem oportunitats educatives per a la infància, l\'adolescència i les famílies a les comarques de Tarragona, amb vocació de servei, inclusió i responsabilitat.',
     url: 'https://www.asociacioneducafe.org',
     siteName: 'Associació Cristiana EducaFe',
     locale: 'ca_ES',

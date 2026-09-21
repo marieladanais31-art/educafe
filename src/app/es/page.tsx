@@ -71,8 +71,8 @@ export default function EsHomePage() {
 
               {/* Badges de Garantía Social */}
               <div className="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ 100% Gratuito</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Acceso Abierto y Universal</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ En desarrollo</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Compromiso educativo</span>
                 <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Aconfesional e Inclusivo</span>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function EsHomePage() {
             Pilares de nuestra labor socioeducativa
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Desarrollamos programas integrales para responder a las necesidades de apoyo, orientación y cohesión en nuestra comunidad.
+            Presentamos las líneas educativas y familiares que EducaFe quiere impulsar a medida que se confirmen los recursos y las condiciones necesarias.
           </p>
         </div>
 
@@ -195,7 +195,7 @@ export default function EsHomePage() {
       </section>
 
       {/* ==================================================================== */}
-      {/* 3. BANNER DESTACADO DE COMPROMISO SOCIAL Y GRATUIDAD */}
+      {/* 3. BANNER DESTACADO DE COMPROMISO INSTITUCIONAL */}
       {/* ==================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-950 to-sky-950 text-white border border-slate-800 shadow-xl">
@@ -205,10 +205,10 @@ export default function EsHomePage() {
                 Compromiso Institucional
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                Acción social de acceso gratuito, abierto y con contenidos aconfesionales
+                Acción educativa responsable, inclusiva y con contenidos aconfesionales
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                La participación no está condicionada por creencias, origen ni capacidad económica. Cada actividad se comunicará con claridad cuando cuente con organización, recursos y plazas confirmadas.
+                Cada actividad se comunicará con claridad cuando cuente con organización, financiación, condiciones de participación y plazas confirmadas.
               </p>
             </div>
 

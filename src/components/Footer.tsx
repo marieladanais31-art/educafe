@@ -139,8 +139,8 @@ export default function Footer() {
             </h4>
             <p className="text-xs text-slate-400 leading-relaxed">
               {isEs
-                ? 'Plataforma de recursos pedagógicos, coordinación de proyectos y red colaborativa.'
-                : 'Plataforma de recursos pedagògics, coordinació de projectes i xarxa col·laborativa.'}
+                ? 'Plataforma de recursos pedagógicos e información educativa.'
+                : 'Plataforma de recursos pedagògics i informació educativa.'}
             </p>
             <a
               href="https://red.asociacioneducafe.org"

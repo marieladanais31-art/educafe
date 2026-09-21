@@ -22,7 +22,7 @@ export default function DonarPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-950 to-sky-950 text-white border border-slate-800 shadow-xl">
           <h2 className="text-2xl sm:text-3xl font-bold">Suport directe a la missió d’EducaFe</h2>
-          <p className="mt-3 max-w-3xl text-sm sm:text-base text-slate-300 leading-relaxed">Les aportacions es destinen a activitats d’accés gratuït, al funcionament responsable de l’associació i a preparar programes que ampliïn les oportunitats educatives d’infants, adolescents i famílies.</p>
+          <p className="mt-3 max-w-3xl text-sm sm:text-base text-slate-300 leading-relaxed">Les aportacions es destinen al funcionament responsable de l’associació i a preparar programes que ampliïn les oportunitats educatives d’infants, adolescents i famílies.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-7 text-sm">
             {['📚 Material educatiu', '👨‍👩‍👧 Suport a famílies', '🤝 Formació del voluntariat', '🧭 Nous projectes'].map((item) => <div key={item} className="rounded-2xl border border-slate-800 bg-slate-900/90 p-4 font-bold">{item}</div>)}
           </div>

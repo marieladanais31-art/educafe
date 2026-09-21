@@ -62,7 +62,7 @@ export default function Header() {
             </a>
             <span className="text-slate-600">|</span>
             <span className="text-teal-400 font-medium text-xs">
-              {isEs ? 'Programas sociales de acceso gratuito' : 'Programes socials d’accés gratuït'}
+              {isEs ? 'Educación, familias y comunidad' : 'Educació, famílies i comunitat'}
             </span>
           </div>
         </div>

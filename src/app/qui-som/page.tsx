@@ -29,9 +29,9 @@ export default function QuiSomPage() {
 
       {/* Foto Destacada d'Equip i Comunitat */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[21/9]">
+        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[16/9]">
           <Image
-            src="/images/family-javea.jpg"
+            src="/images/hub-spain-classroom.jpg"
             alt="Equip i comunitat de l'Associació EducaFe"
             fill
             className="object-cover object-center"
@@ -70,11 +70,11 @@ export default function QuiSomPage() {
               L&apos;<strong>Associació Cristiana EducaFe</strong> és una entitat d&apos;inspiració cristiana. Aquesta inspiració explica per què fem aquesta tasca, però no constitueix cap requisit ni condició per rebre-la.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Tots els nostres programes d&apos;acció social són de <strong>lliure accés, gratuïts i el seu contingut és totalment aconfessional</strong>. La participació no està condicionada per la creença, l&apos;origen, la llengua, el gènere, l&apos;orientació sexual, la discapacitat ni la situació administrativa de les persones beneficiàries.
+              La nostra acció social es dissenya amb vocació de servei, inclusió i continguts aconfessionals. Les condicions de participació de cada activitat es comunicaran quan estiguin confirmats l&apos;organització, el finançament i el nombre de places.
             </p>
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Accés lliure i obert</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Gratuïtat 100%</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Vocació de servei</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Condicions transparents</span>
               <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ No discriminació</span>
             </div>
           </div>

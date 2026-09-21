@@ -66,8 +66,8 @@ export default function HomePage() {
 
               {/* Badges de Garantia Social */}
               <div className="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ 100% Gratuït</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Accés Obert i Universal</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ En desenvolupament</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Compromís educatiu</span>
                 <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Aconfessional i Inclusiu</span>
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function HomePage() {
             Pilars de la nostra tasca socioeducativa
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Desenvolupem programes integrals per atendre les necessitats de suport, orientació i cohesió a la nostra comunitat.
+            Presentem les línies educatives i familiars que EducaFe vol impulsar a mesura que es confirmin els recursos i les condicions necessàries.
           </p>
         </div>
 
@@ -190,7 +190,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================================================================== */}
-      {/* 3. BANNER DESTACAT DE COMPROMÍS SOCIAL I GRATUÏTAT */}
+      {/* 3. BANNER DESTACAT DE COMPROMÍS INSTITUCIONAL */}
       {/* ==================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-950 to-sky-950 text-white border border-slate-800 shadow-xl">
@@ -200,10 +200,10 @@ export default function HomePage() {
                 Compromís Institucional
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                Acció social d&apos;accés gratuït, obert i amb continguts aconfessionals
+                Acció educativa responsable, inclusiva i amb continguts aconfessionals
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                La participació no està condicionada per creences, origen ni capacitat econòmica. Cada activitat es comunicarà amb claredat quan disposi d’organització, recursos i places confirmades.
+                Cada activitat es comunicarà amb claredat quan disposi d&apos;organització, finançament, condicions de participació i places confirmades.
               </p>
             </div>
 

@@ -70,7 +70,7 @@ export default function HeroVideo() {
                 />
                 <div className="flex flex-col text-left">
                   <span className="text-[10px] uppercase tracking-widest font-bold text-amber-400">
-                    Alianza Internacional
+                    Referencia Educativa
                   </span>
                   <span className="text-xs font-semibold text-slate-200">
                     Chanak Academy · Dual Diploma
@@ -112,7 +112,7 @@ export default function HeroVideo() {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-semibold px-7 py-4 rounded-2xl border border-slate-700 hover:border-slate-500 transition-all text-base"
               >
                 <ShieldCheck className="w-5 h-5 text-teal-400" />
-                <span>Alianzas e Inversión Social</span>
+                <span>Conocer EducaFe</span>
               </Link>
             </div>
 

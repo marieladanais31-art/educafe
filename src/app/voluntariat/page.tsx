@@ -35,12 +35,12 @@ export default function VoluntariatPage() {
 
       {/* Foto de l'Equip d'Educadors i Voluntaris */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[21/9]">
+        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-white aspect-[16/9]">
           <Image
             src="/images/team-educafe-lineup.jpg"
             alt="Equip de voluntaris i professionals de l'Associació EducaFe"
             fill
-            className="object-cover object-center"
+            className="object-contain object-center"
             sizes="(max-width: 1200px) 100vw, 1200px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6 sm:p-8">
@@ -71,7 +71,7 @@ export default function VoluntariatPage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Mentoria i Reforç Escolar</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Acompanyament personalitzat a joves del Projecte Brúixola, suport a l&apos;estudi, motivació acadèmica i foment de l&apos;autonomia personal.
+              Possibles tasques de suport a l&apos;estudi, motivació acadèmica i foment de l&apos;autonomia personal en les iniciatives que s&apos;activin.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export default function VoluntariatPage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Dinamització Digital i IA</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Col·laboració en tallers de competència digital, programació, pensament crític i eines tecnològiques per reduir la bretxa digital.
+              Possible suport en activitats de competència digital, pensament crític i ús responsable d&apos;eines tecnològiques.
             </p>
           </div>
 
@@ -106,7 +106,7 @@ export default function VoluntariatPage() {
             <span>Garanties del Voluntariat i Entorn Segur (Llei 25/2015 i LOPIVI)</span>
           </div>
           <p className="text-sm text-slate-700 leading-relaxed">
-            L&apos;Associació Cristiana EducaFe compta amb un <strong>Pla de Voluntariat formal</strong> que estableix l&apos;acord de col·laboració, assegurança d&apos;accidents i responsabilitat civil, formació inicial i acompanyament continuat.
+            Abans de qualsevol incorporació es formalitzaran les condicions corresponents, inclosos l&apos;acord de voluntariat, les cobertures exigibles, la formació inicial i l&apos;acompanyament.
           </p>
           <p className="text-sm text-slate-700 leading-relaxed">
             En compliment de la LOPIVI, és requisit indispensable aportar la <strong>certificació negativa del Registre Central de Delinqüents Sexuals i de Tracta</strong> abans d&apos;iniciar qualsevol activitat en contacte amb menors.

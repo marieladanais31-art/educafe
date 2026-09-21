@@ -33,14 +33,14 @@ export default function EsDonarPage() {
         </div>
       </section>
 
-      {/* Gratuidad y Destino de los Fondos */}
+      {/* Destino de los Fondos */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-950 to-sky-950 text-white border border-slate-800 space-y-6 shadow-xl">
           <div className="max-w-3xl space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-teal-400">Compromiso Social y Destino de Fondos</span>
             <h2 className="text-2xl sm:text-3xl font-bold">Apoyo directo a la misión de EducaFe</h2>
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Las aportaciones se destinan a sostener actividades de acceso gratuito, fortalecer la estructura de la asociación y preparar programas que amplíen las oportunidades educativas de niños, adolescentes y familias.
+              Las aportaciones se destinan a fortalecer la estructura de la asociación y preparar programas que amplíen las oportunidades educativas de niños, adolescentes y familias.
             </p>
           </div>
 

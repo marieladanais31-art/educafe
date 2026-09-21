@@ -62,7 +62,7 @@ export default function EsProyectoBruixolaPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span className="text-xs font-bold text-emerald-300">100% Gratuito</span>
+                <span className="text-xs font-bold text-emerald-300">En desarrollo</span>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function EsProyectoBruixolaPage() {
             { value: '30', label: 'plazas previstas para adolescentes' },
             { value: '25', label: 'familias previstas en el itinerario' },
             { value: '12', label: 'meses de intervención' },
-            { value: '100%', label: 'acceso gratuito' },
+            { value: 'PAI', label: 'plan de acompañamiento individualizado' },
           ].map((item) => (
             <div key={item.label} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
               <div className="text-3xl font-extrabold text-sky-700">{item.value}</div>
@@ -152,10 +152,10 @@ export default function EsProyectoBruixolaPage() {
             <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
               <Users className="w-6 h-6 text-emerald-700" />
             </div>
-            <div className="text-xs font-bold uppercase tracking-wider text-emerald-600">Comunidad y Entorno</div>
-            <h3 className="text-lg font-bold text-slate-900">Escuela de Familias y Aprendizaje-Servicio (ApS)</h3>
+            <div className="text-xs font-bold uppercase tracking-wider text-emerald-600">Familias y Participación</div>
+            <h3 className="text-lg font-bold text-slate-900">Orientación Familiar y Proyectos Prácticos</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Encuentros periódicos con madres y padres para fortalecer el vínculo familiar, complementados con proyectos de retorno comunitario en Mont-roig del Camp.
+              Propuesta de encuentros de orientación familiar y actividades prácticas para que los jóvenes apliquen lo aprendido, refuercen su autonomía y desarrollen responsabilidad personal.
             </p>
           </div>
 
@@ -174,7 +174,7 @@ export default function EsProyectoBruixolaPage() {
           {[
             { icon: Clock3, title: 'Ritmo continuado', text: '38 sesiones de habilidades para la vida, 19 de laboratorio digital y 20 de competencia comunicativa.' },
             { icon: HeartHandshake, title: 'Acompañamiento', text: '10 tutorías individuales y seguimiento con cada familia durante el itinerario.' },
-            { icon: Target, title: 'Orientación y comunidad', text: 'Cuatro salidas de descubrimiento vocacional y aprendizaje-servicio.' },
+            { icon: Target, title: 'Orientación', text: 'Actividades de descubrimiento vocacional y aplicación práctica de los aprendizajes.' },
             { icon: FileCheck2, title: 'Evaluación', text: 'Indicadores iniciales, seguimiento intermedio y evaluación final con evidencias disociadas.' },
           ].map(({ icon: Icon, title, text }) => (
             <div key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
@@ -186,16 +186,16 @@ export default function EsProyectoBruixolaPage() {
         </div>
       </section>
 
-      {/* Acceso Coordinado */}
+      {/* Información general del proyecto */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white border border-slate-800 space-y-4">
           <div className="flex items-center gap-2 text-teal-400 font-bold text-xs uppercase tracking-wider">
             <Building2 className="w-4 h-4" />
-            <span>Vías de Acceso y Derivación Institucional</span>
+            <span>Información del Proyecto Brúixola</span>
           </div>
           <h2 className="text-2xl font-bold">¿Quieres recibir información?</h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
-            El proyecto se encuentra en fase de desarrollo y todavía no hay una convocatoria de plazas abierta. Las familias, profesionales y entidades interesadas pueden solicitar información sin que ello implique admisión, derivación ni compromiso de colaboración.
+            El proyecto se encuentra en fase de desarrollo y todavía no hay una convocatoria de plazas abierta. Las personas interesadas pueden solicitar información general. Las condiciones definitivas se publicarán cuando el proyecto esté aprobado y disponga de los recursos necesarios.
           </p>
           <div className="pt-2 flex flex-wrap gap-3">
             <a href="mailto:info@asociacioneducafe.org?subject=Información%20Proyecto%20Brúixola" className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-sky-600">

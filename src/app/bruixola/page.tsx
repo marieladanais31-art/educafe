@@ -62,7 +62,7 @@ export default function BruixolaPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span className="text-xs font-bold text-emerald-300">100% Gratuït</span>
+                <span className="text-xs font-bold text-emerald-300">En desenvolupament</span>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function BruixolaPage() {
             { value: '30', label: 'places previstes per a adolescents' },
             { value: '25', label: 'famílies previstes a l’itinerari' },
             { value: '12', label: 'mesos d’intervenció' },
-            { value: '100%', label: 'accés gratuït' },
+            { value: 'PAI', label: 'pla d’acompanyament individualitzat' },
           ].map((item) => (
             <div key={item.label} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
               <div className="text-3xl font-extrabold text-sky-700">{item.value}</div>
@@ -151,10 +151,10 @@ export default function BruixolaPage() {
             <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
               <Users className="w-6 h-6 text-emerald-700" />
             </div>
-            <div className="text-xs font-bold uppercase tracking-wider text-emerald-600">Comunitat i Entorn</div>
-            <h3 className="text-lg font-bold text-slate-900">Escola de Famílies i Aprenentatge-Servei (ApS)</h3>
+            <div className="text-xs font-bold uppercase tracking-wider text-emerald-600">Famílies i Participació</div>
+            <h3 className="text-lg font-bold text-slate-900">Orientació Familiar i Projectes Pràctics</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Trobades mensuals d&apos;orientació parental i projectes comunitaris on els joves apliquen el que han après en benefici del municipi, fomentant el sentit de pertinença i la ciutadania activa.
+              Proposta de trobades d&apos;orientació parental i activitats pràctiques perquè els joves apliquin el que han après, reforcin l&apos;autonomia i desenvolupin responsabilitat personal.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ export default function BruixolaPage() {
           {[
             { icon: Clock3, title: 'Ritme continuat', text: '38 sessions d’habilitats per a la vida, 19 de laboratori digital i 20 de competència comunicativa.' },
             { icon: HeartHandshake, title: 'Acompanyament', text: '10 tutories individuals i seguiment amb cada família durant l’itinerari.' },
-            { icon: Target, title: 'Orientació i comunitat', text: 'Quatre sortides de descoberta vocacional i aprenentatge-servei.' },
+            { icon: Target, title: 'Orientació', text: 'Activitats de descoberta vocacional i aplicació pràctica dels aprenentatges.' },
             { icon: FileCheck2, title: 'Avaluació', text: 'Indicadors inicials, seguiment intermedi i avaluació final amb evidències dissociades.' },
           ].map(({ icon: Icon, title, text }) => (
             <div key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
@@ -182,16 +182,16 @@ export default function BruixolaPage() {
         </div>
       </section>
 
-      {/* Caixa d'Accés i Coordinació Institucional */}
+      {/* Informació general del projecte */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white border border-slate-800 space-y-4">
           <div className="flex items-center gap-2 text-teal-400 font-bold text-xs uppercase tracking-wider">
             <Building2 className="w-4 h-4" />
-            <span>Vies d&apos;Accés i Derivació Institucional</span>
+            <span>Informació del Projecte Brúixola</span>
           </div>
           <h2 className="text-2xl font-bold">Vols rebre informació?</h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
-            El projecte es troba en fase de desenvolupament i encara no hi ha una convocatòria de places oberta. Les famílies, professionals i entitats interessades poden sol·licitar informació sense que això impliqui admissió, derivació ni compromís de col·laboració.
+            El projecte es troba en fase de desenvolupament i encara no hi ha una convocatòria de places oberta. Les persones interessades poden sol·licitar informació general. Les condicions definitives es publicaran quan el projecte estigui aprovat i disposi dels recursos necessaris.
           </p>
           <div className="pt-2 flex flex-wrap gap-3">
             <a href="mailto:info@asociacioneducafe.org?subject=Informació%20Projecte%20Brúixola" className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-sky-600">Sol·licitar informació <ArrowRight className="h-4 w-4" /></a>

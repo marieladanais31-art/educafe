@@ -29,9 +29,9 @@ export default function EsQuienesSomosPage() {
 
       {/* Foto Destacada de Comunidad */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[21/9]">
+        <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[16/9]">
           <Image
-            src="/images/family-javea.jpg"
+            src="/images/hub-spain-classroom.jpg"
             alt="Comunidad, familias y equipo de la Asociación EducaFe"
             fill
             className="object-cover object-center"
@@ -70,11 +70,11 @@ export default function EsQuienesSomosPage() {
               La <strong>Asociación Cristiana EducaFe</strong> es una entidad de inspiración cristiana. Esa inspiración explica por qué hacemos este trabajo, pero no constituye ningún requisito ni condición para recibirlo.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Nuestros programas de acción social son de <strong>acceso abierto, gratuitos y su contenido es aconfesional</strong>. La participación no está condicionada por la creencia, el origen, la lengua, el género, la orientación sexual, la discapacidad ni la situación administrativa.
+              Nuestra acción social se diseña con vocación de servicio, inclusión y contenidos aconfesionales. Las condiciones de participación de cada actividad se comunicarán cuando estén confirmados su organización, financiación y número de plazas.
             </p>
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Acceso abierto</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ 100% Gratuito</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Vocación de servicio</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Condiciones transparentes</span>
               <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ No discriminación</span>
             </div>
           </div>

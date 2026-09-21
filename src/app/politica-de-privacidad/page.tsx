@@ -60,7 +60,7 @@ export default function PoliticaPrivacitatPage() {
           <div>
             <strong className="text-slate-100">Representació Legal:</strong><br />
             Elías Vidal Campalans (President)<br />
-            Mary Claudia García Jiménez (Secretària)
+            Mary Claudia Jiménez (Secretària)
           </div>
         </div>
       </div>

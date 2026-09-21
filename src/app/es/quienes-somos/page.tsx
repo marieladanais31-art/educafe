@@ -114,7 +114,7 @@ export default function EsQuienesSomosPage() {
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider text-teal-600">Secretaria</div>
-            <div className="text-lg font-bold text-slate-900">Patricia Campalans</div>
+            <div className="text-lg font-bold text-slate-900">Mary Claudia Jiménez</div>
             <p className="text-xs text-slate-500">Gestión documental, actas y coordinación administrativa.</p>
           </div>
         </div>

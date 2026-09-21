@@ -60,7 +60,7 @@ export default function PoliticaPrivacidadPage() {
           <div>
             <strong className="text-slate-100">Representación Legal:</strong><br />
             Elías Vidal Campalans (Presidente)<br />
-            Mariela Andrade Aparicio de Vidal (Representante)
+            Mary Claudia Jiménez (Secretaria)
           </div>
         </div>
       </div>

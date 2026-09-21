@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Users, BookOpen } from 'lucide-react';
 
 export const metadata = {
@@ -103,9 +102,10 @@ export default function EsQuienesSomosPage() {
           <p className="text-slate-600 text-sm">
             Órgano colegiado de gobierno y representación de la Asociación Cristiana EducaFe.
           </p>
+          <p className="text-xs text-slate-500">Composición aprobada por la Asamblea General de 3 de julio de 2026. La actualización registral se encuentra en tramitación.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider text-sky-600">Presidente</div>
             <div className="text-lg font-bold text-slate-900">Elías Vidal Campalans</div>
@@ -114,14 +114,8 @@ export default function EsQuienesSomosPage() {
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider text-teal-600">Secretaria</div>
-            <div className="text-lg font-bold text-slate-900">Mary Claudia García Jiménez</div>
+            <div className="text-lg font-bold text-slate-900">Patricia Campalans</div>
             <p className="text-xs text-slate-500">Gestión documental, actas y coordinación administrativa.</p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2">
-            <div className="text-xs font-bold uppercase tracking-wider text-amber-600">Tesorera / Vocal</div>
-            <div className="text-lg font-bold text-slate-900">Mariela Andrade Aparicio</div>
-            <p className="text-xs text-slate-500">Supervisión económica, rendición de cuentas y apoyo metodológico.</p>
           </div>
         </div>
       </section>

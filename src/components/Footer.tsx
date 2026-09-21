@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Mail, MapPin, ShieldCheck, ExternalLink, ShieldAlert, HeartHandshake } from 'lucide-react';
+import { Mail, MapPin, ShieldCheck, ExternalLink, ShieldAlert } from 'lucide-react';
 
 export default function Footer() {
   const pathname = usePathname();
@@ -58,6 +58,15 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm text-slate-300">
               <li>
                 <Link
+                  href={isEs ? '/es/hazte-socio' : '/fes-te-soci'}
+                  className="hover:text-sky-400 transition-colors flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                  <span>{isEs ? 'Hazte socio o colaborador' : 'Fes-te soci o col·laborador'}</span>
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={isEs ? '/es/proyecto-bruixola' : '/bruixola'}
                   className="hover:text-sky-400 transition-colors flex items-center gap-2"
                 >
@@ -104,8 +113,8 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-1" />
                 <span>
-                  <strong className="text-white">Mont-roig del Camp</strong><br />
-                  {isEs ? 'Comarca del Baix Camp, Tarragona (Cataluña)' : 'Comarca del Baix Camp, Tarragona (Catalunya)'}
+                  <strong className="text-white">Provincia de Tarragona</strong><br />
+                  {isEs ? 'Camp de Tarragona y Terres de l’Ebre' : 'Camp de Tarragona i Terres de l’Ebre'}
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
@@ -116,8 +125,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <ShieldAlert className="w-4 h-4 text-teal-400 shrink-0" />
-                <a href="mailto:proteccio@asociacioneducafe.org" className="hover:text-teal-300 transition-colors text-xs">
-                  Canal LOPIVI: proteccio@asociacioneducafe.org
+                <a href="mailto:info@asociacioneducafe.org?subject=Canal%20confidencial%20de%20protección" className="hover:text-teal-300 transition-colors text-xs">
+                  {isEs ? 'Canal confidencial de protección' : 'Canal confidencial de protecció'}
                 </a>
               </li>
             </ul>

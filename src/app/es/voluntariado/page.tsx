@@ -1,14 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import {
   HeartHandshake,
-  Users,
   ShieldCheck,
-  CheckCircle2,
-  Mail,
-  Compass,
-  ArrowRight
 } from 'lucide-react';
 import VolunteerForm from '@/components/VolunteerForm';
 

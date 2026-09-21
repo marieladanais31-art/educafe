@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/bruixola',
     '/voluntariat',
     '/donar',
+    '/fes-te-soci',
     '/proteccio-infancia',
     '/politica-de-privacidad',
     '/es',
@@ -19,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/es/proyecto-bruixola',
     '/es/voluntariado',
     '/es/donar',
+    '/es/hazte-socio',
     '/es/proteccion-infancia',
     '/es/politica-de-privacidad',
   ];

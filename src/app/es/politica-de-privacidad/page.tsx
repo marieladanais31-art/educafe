@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { ShieldCheck, FileText, Building, Mail, MapPin } from 'lucide-react';
+import { ShieldCheck, FileText, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Aviso Legal y Política de Privacidad | ASOCIACIÓN CRISTIANA EDUCAFE (NIF G19357789)',
@@ -87,7 +87,7 @@ export default function PoliticaPrivacidadPage() {
             De conformidad con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), se informa a los usuarios de que los datos personales recabados mediante formularios de contacto, inscripciones a programas de estudio, voluntariado o comunicaciones electrónicas serán tratados bajo la responsabilidad de la ASOCIACIÓN CRISTIANA EDUCAFE.
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
-            <li><strong>Finalidad del Tratamiento:</strong> Gestión de consultas, tramitación de solicitudes de colaboración, coordinación de programas de capacitación juvenil (Tech Lab, Green Hub, Life Skills), alianzas locales y envío de información institucional.</li>
+            <li><strong>Finalidad del Tratamiento:</strong> Gestión de consultas, solicitudes de colaboración, voluntariado, participación asociativa y envío de información institucional solicitada.</li>
             <li><strong>Base Jurídica:</strong> El consentimiento expreso del usuario manifestado al cumplimentar y enviar los formularios correspondientes.</li>
             <li><strong>Destinatarios:</strong> No se cederán datos a terceros salvo obligación legal expresa o requerimiento de la administración competente.</li>
             <li><strong>Ejercicio de Derechos (ARCO):</strong> El usuario puede ejercitar en cualquier momento sus derechos de acceso, rectificación, supresión, limitación y oposición enviando un correo electrónico a <code>info@asociacioneducafe.org</code> adjuntando copia de su documento de identidad.</li>

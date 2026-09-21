@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { ShieldCheck, FileText, Building, Mail, MapPin } from 'lucide-react';
+import { ShieldCheck, FileText, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Avís Legal i Política de Privacitat | ASOCIACIÓN CRISTIANA EDUCAFE (NIF G19357789)',
@@ -87,7 +87,7 @@ export default function PoliticaPrivacitatPage() {
             De conformitat amb el Reglament (UE) 2016/679 del Parlament Europeu i del Consell (RGPD) i la Llei Orgànica 3/2018 (LOPDGDD), s’informa a les persones usuàries que les dades personals recollides mitjançant canals de contacte, inscripcions a programes socioeducatius o voluntariat seran tractades sota la responsabilitat de l’ASOCIACIÓN CRISTIANA EDUCAFE.
           </p>
           <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
-            <li><strong>Finalitat del Tractament:</strong> Gestió de consultes, coordinació de programes d’acció social (Projecte Brúixola, suport familiar), voluntariat i enviament d’informació institucional.</li>
+            <li><strong>Finalitat del Tractament:</strong> Gestió de consultes, sol·licituds de col·laboració, voluntariat, participació associativa i enviament d’informació institucional sol·licitada.</li>
             <li><strong>Base Jurídica:</strong> El consentiment exprés de la persona usuària o representant legal.</li>
             <li><strong>Destinataris:</strong> No se cediran dades a tercers excepte obligació legal o requeriment de l’administració pública competent.</li>
             <li><strong>Exercici de Drets (ARCO):</strong> Podeu exercir en qualsevol moment els drets d’accés, rectificació, supressió, limitació i oposició adreçant-vos a <code>info@asociacioneducafe.org</code>.</li>

@@ -31,8 +31,8 @@ export default function Header() {
         { label: 'Protecció a la Infància', href: '/proteccio-infancia' },
       ];
 
-  const volunteerText = isEs ? 'Hazte Voluntario' : 'Fes-te Voluntari';
-  const volunteerHref = isEs ? '/es/voluntariado' : '/voluntariat';
+  const memberText = isEs ? 'Hazte socio' : 'Fes-te soci';
+  const memberHref = isEs ? '/es/hazte-socio' : '/fes-te-soci';
   const donateText = isEs ? 'Donar' : 'Donar';
   const donateHref = isEs ? '/es/donar' : '/donar';
 
@@ -49,7 +49,7 @@ export default function Header() {
             </span>
             <span className="text-slate-300 font-medium flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5 text-sky-400" />
-              <span>Mont-roig del Camp (Baix Camp, Tarragona)</span>
+              <span>Àmbit d&apos;actuació: Camp de Tarragona i Terres de l&apos;Ebre</span>
             </span>
           </div>
 
@@ -62,7 +62,7 @@ export default function Header() {
             </a>
             <span className="text-slate-600">|</span>
             <span className="text-teal-400 font-medium text-xs">
-              {isEs ? 'Acción Social 100% Gratuita' : 'Acció Social 100% Gratuïta'}
+              {isEs ? 'Programas sociales de acceso gratuito' : 'Programes socials d’accés gratuït'}
             </span>
           </div>
         </div>
@@ -118,11 +118,11 @@ export default function Header() {
             </Link>
 
             <Link
-              href={volunteerHref}
+              href={memberHref}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all group"
             >
               <HeartHandshake className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              <span>{volunteerText}</span>
+              <span>{memberText}</span>
             </Link>
           </div>
 
@@ -174,12 +174,12 @@ export default function Header() {
               <span>{donateText}</span>
             </Link>
             <Link
-              href={volunteerHref}
+              href={memberHref}
               onClick={() => setMobileMenuOpen(false)}
               className="inline-flex justify-center items-center gap-1.5 bg-gradient-to-r from-sky-600 to-teal-600 text-white font-bold px-3 py-2.5 rounded-xl text-sm text-center shadow"
             >
               <HeartHandshake className="w-4 h-4" />
-              <span>{volunteerText}</span>
+              <span>{memberText}</span>
             </Link>
           </div>
         </div>

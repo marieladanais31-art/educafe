@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FileText, Download, ShieldCheck, CheckCircle, ArrowDownToLine } from 'lucide-react';
+import { FileText, ShieldCheck, ArrowDownToLine } from 'lucide-react';
 
 interface DocumentItem {
   id: string;
@@ -20,7 +20,6 @@ interface DocumentDownloadTableProps {
 
 export default function DocumentDownloadTable({ documents, lang = 'ca' }: DocumentDownloadTableProps) {
   const downloadText = lang === 'ca' ? 'Descarregar PDF' : 'Descargar PDF';
-  const certifiedText = lang === 'ca' ? 'Document Oficial Diligentat' : 'Documento Oficial Diligenciado';
 
   return (
     <div className="space-y-4">

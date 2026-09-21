@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Send, CheckCircle2, ShieldCheck, HeartHandshake } from 'lucide-react';
+import { Send, CheckCircle2, HeartHandshake } from 'lucide-react';
 
 interface VolunteerFormProps {
   lang?: 'ca' | 'es';
@@ -27,6 +27,18 @@ export default function VolunteerForm({ lang = 'ca' }: VolunteerFormProps) {
       alert(lang === 'ca' ? 'Cal acceptar els requisits legals i de privacitat.' : 'Es necesario aceptar los requisitos legales y de privacidad.');
       return;
     }
+    const subject = isCa ? 'Sol·licitud de voluntariat EducaFe' : 'Solicitud de voluntariado EducaFe';
+    const body = [
+      `${isCa ? 'Nom' : 'Nombre'}: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `${isCa ? 'Telèfon' : 'Teléfono'}: ${formData.phone}`,
+      `${isCa ? 'Municipi' : 'Municipio'}: ${formData.municipality}`,
+      `${isCa ? 'Àmbit' : 'Área'}: ${formData.area}`,
+      `${isCa ? 'Disponibilitat' : 'Disponibilidad'}: ${formData.availability}`,
+      '',
+      formData.message,
+    ].join('\n');
+    window.location.href = `mailto:info@asociacioneducafe.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
@@ -39,19 +51,19 @@ export default function VolunteerForm({ lang = 'ca' }: VolunteerFormProps) {
           <CheckCircle2 className="w-10 h-10" />
         </div>
         <h3 className="text-2xl font-bold text-slate-900">
-          {isCa ? 'Sol·licitud de Voluntariat Rebuda!' : '¡Solicitud de Voluntariado Recibida!'}
+          {isCa ? 'Correu de sol·licitud preparat' : 'Correo de solicitud preparado'}
         </h3>
         <p className="text-sm sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
           {isCa
-            ? 'Moltes gràcies pel teu compromís i solidaritat. El nostre equip de coordinació socioeducativa es posarà en contacte amb tu en breu per concertar una trobada informativa.'
-            : 'Muchas gracias por tu compromiso y solidaridad. Nuestro equipo de coordinación socioeducativa se pondrá en contacto contigo en breve para concertar una reunión informativa.'}
+            ? 'S’ha obert la teva aplicació de correu amb les dades emplenades. La sol·licitud només quedarà enviada quan confirmis l’enviament des del teu correu.'
+            : 'Se ha abierto tu aplicación de correo con los datos completados. La solicitud solo quedará enviada cuando confirmes el envío desde tu correo.'}
         </p>
         <div className="pt-2">
           <button
             onClick={() => setSubmitted(false)}
             className="text-xs font-bold text-emerald-700 underline hover:text-emerald-900"
           >
-            {isCa ? 'Enviar una altra sol·licitud' : 'Enviar otra solicitud'}
+            {isCa ? 'Tornar al formulari' : 'Volver al formulario'}
           </button>
         </div>
       </div>
@@ -212,7 +224,7 @@ export default function VolunteerForm({ lang = 'ca' }: VolunteerFormProps) {
         className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-sky-600 hover:from-teal-700 hover:to-sky-700 text-white font-bold px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition-all text-sm"
       >
         <Send className="w-4 h-4" />
-        <span>{isCa ? 'Enviar Sol·licitud de Voluntariat' : 'Enviar Solicitud de Voluntariado'}</span>
+        <span>{isCa ? 'Preparar Correu de Sol·licitud' : 'Preparar Correo de Solicitud'}</span>
       </button>
     </form>
   );

@@ -1,101 +1,17 @@
 import React from 'react';
-import { ShieldCheck, FileText, Info, CheckCircle2, Building, Scale } from 'lucide-react';
-import DocumentDownloadTable from '@/components/DocumentDownloadTable';
+import Link from 'next/link';
+import { CheckCircle2, FileText, Mail, Scale, ShieldCheck } from 'lucide-react';
 
-export const metadata = {
-  title: 'Portal de Transparència | Associació Cristiana EducaFe',
-  description: 'Informació institucional, jurídica i econòmica de l\'Associació Cristiana EducaFe. Comptes anuals, estatuts i registre oficial.',
-};
+export const metadata = { title: 'Transparència | Associació Cristiana EducaFe', description: 'Informació institucional, registral i de bon govern de l’Associació Cristiana EducaFe.' };
+const documents = ['Estatuts inscrits', 'Resolució d’inscripció registral', 'Targeta d’identificació fiscal', 'Informació econòmica del darrer exercici tancat', 'Pla de voluntariat i documents d’entorn segur'];
 
 export default function TransparenciaPage() {
-  const documents = [
-    {
-      id: 'estatuts',
-      title: 'Estatuts de l’Associació Cristiana EducaFe',
-      description: 'Estatuts diligenciats oficialment conforme a la Llei d’Associacions de Catalunya.',
-      officialRef: 'Generalitat de Catalunya · Reg. núm. 75881',
-      filename: 'estatuts-educafe-75881.pdf',
-      date: '2024 / Vigent'
-    },
-    {
-      id: 'resolucio',
-      title: 'Resolució d’Inscripció Registral',
-      description: 'Inscripció formal al Registre d’Entitats Jurídiques de la Direcció General de Dret, Entitats Jurídiques i Mediació.',
-      officialRef: 'Departament de Justícia i Qualitat Democràtica',
-      filename: 'resolucio-registre-justicia.pdf',
-      date: 'Registre Oficial'
-    },
-    {
-      id: 'cif',
-      title: 'Targeta d’Identificació Fiscal (NIF)',
-      description: 'Document acreditatiu del Número d’Identificació Fiscal emès per l’Agència Estatal d’Administració Tributària (AEAT).',
-      officialRef: 'NIF G19357789',
-      filename: 'targeta-cif-g19357789.pdf',
-      date: 'Definitiu'
-    },
-    {
-      id: 'comptes2025',
-      title: 'Comptes Anuals de l’Exercici Tancat 2025',
-      description: 'Balanç econòmic i compte de resultats de l’exercici 2025 (Ingressos: 2.879,64 € | Despeses: 3.019,12 €).',
-      officialRef: 'Aprovat per l’Assemblea General',
-      filename: 'comptes-anuals-2025.pdf',
-      date: 'Tancament 31/12/2025'
-    },
-    {
-      id: 'voluntariat',
-      title: 'Pla de Voluntariat de l’Entitat',
-      description: 'Marc regulador dels drets, deures i formació de les persones voluntàries (Llei 45/2015 del Voluntariat).',
-      officialRef: 'Marc Normatiu d’Entorn Segur',
-      filename: 'pla-voluntariat-educafe.pdf',
-      date: '2025 - 2027'
-    }
-  ];
-
   return (
     <div className="space-y-16 py-12">
-      
-      {/* Header Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 text-sky-700 text-xs font-bold uppercase tracking-wider border border-sky-200">
-            <Scale className="w-3.5 h-3.5 text-sky-600" />
-            <span>Retiment de Comptes i Legalitat</span>
-          </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-            Portal de Transparència
-          </h1>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            En compliment de la Llei 19/2014 de transparència, accés a la informació pública i bon govern, i dels criteris ètics de la Fundació &ldquo;la Caixa&rdquo; i convocatòries públiques, posem a disposició de la ciutadania la documentació institucional, registral i econòmica de l&apos;entitat.
-          </p>
-        </div>
-      </section>
-
-      {/* Taula de Descàrrega Documental */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-slate-900">Documentació Oficial Diligenciada</h2>
-          <span className="text-xs text-slate-500 font-medium hidden sm:inline">Format PDF descargable</span>
-        </div>
-
-        <DocumentDownloadTable documents={documents} lang="ca" />
-      </section>
-
-      {/* Nota de Transparència Econòmica */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 space-y-4">
-          <div className="flex items-center gap-2 text-slate-900 font-bold text-base">
-            <Info className="w-5 h-5 text-sky-600 shrink-0" />
-            <span>Nota aclaratòria sobre l&apos;exercici econòmic 2025</span>
-          </div>
-          <p className="text-sm text-slate-700 leading-relaxed">
-            Durant l&apos;exercici 2025, l&apos;Associació Cristiana EducaFe va desenvolupar la seva activitat mitjançant <strong>espais cedits gratuïtament per entitats col·laboradores i treball voluntari</strong> de l&apos;equip humà, generant un flux econòmic mínim en els seus comptes bancaris (2.879,64 € d&apos;ingressos i 3.019,12 € de despeses).
-          </p>
-          <p className="text-sm text-slate-700 leading-relaxed">
-            La concurrència a convocatòries públiques i de fundacions socials respon precisament a la voluntat de <strong>professionalitzar la intervenció, consolidar l&apos;equip tècnic i donar continuïtat estructural al Projecte Brúixola</strong> a les comarques de Tarragona.
-          </p>
-        </div>
-      </section>
-
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div className="max-w-3xl space-y-4"><div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-sky-700"><Scale className="h-4 w-4" /> Rendició de comptes</div><h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900">Transparència institucional</h1><p className="text-base sm:text-lg leading-relaxed text-slate-600">Compartim de manera clara la identitat jurídica, la governança i els compromisos de l’Associació Cristiana EducaFe.</p></div></section>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-1 md:grid-cols-3 gap-5"><div className="rounded-2xl border border-slate-200 bg-white p-6"><ShieldCheck className="h-6 w-6 text-sky-700" /><div className="mt-4 text-xs font-bold uppercase text-slate-500">Entitat</div><div className="mt-1 font-bold text-slate-900">Associació Cristiana EducaFe</div></div><div className="rounded-2xl border border-slate-200 bg-white p-6"><FileText className="h-6 w-6 text-teal-700" /><div className="mt-4 text-xs font-bold uppercase text-slate-500">NIF</div><div className="mt-1 font-mono font-bold text-slate-900">G19357789</div></div><div className="rounded-2xl border border-slate-200 bg-white p-6"><Scale className="h-6 w-6 text-amber-700" /><div className="mt-4 text-xs font-bold uppercase text-slate-500">Registre</div><div className="mt-1 font-bold text-slate-900">Generalitat de Catalunya núm. 75881</div></div></div></section>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 sm:p-10"><h2 className="text-2xl font-bold text-slate-900">Documentació institucional</h2><p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600">L’entitat està revisant i ordenant el repositori públic per garantir que cada descàrrega correspongui al document complet i vigent. Mentre finalitza aquest procés, la documentació es pot sol·licitar directament.</p><ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">{documents.map((item) => <li key={item} className="flex gap-2 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700"><CheckCircle2 className="h-4 w-4 shrink-0 text-teal-600" />{item}</li>)}</ul><a href="mailto:info@asociacioneducafe.org?subject=Sol·licitud%20de%20documentació%20institucional" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-sky-600 px-5 py-3 text-sm font-bold text-white hover:bg-sky-700"><Mail className="h-4 w-4" /> Sol·licitar documentació</a></div></section>
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div className="rounded-3xl bg-slate-900 p-8 text-white"><h2 className="text-xl font-bold">Governança i participació</h2><p className="mt-3 text-sm leading-relaxed text-slate-300">La informació sobre la Junta Directiva, la missió i la naturalesa de l’acció social està disponible a la secció Qui Som.</p><Link href="/qui-som#junta" className="mt-5 inline-block text-sm font-bold text-sky-300 underline">Veure Qui Som i Junta Directiva</Link></div></section>
     </div>
   );
 }

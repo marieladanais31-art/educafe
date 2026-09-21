@@ -1,19 +1,19 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   Compass,
-  Sparkles,
   MapPin,
   Calendar,
   CheckCircle2,
   Users,
   Cpu,
   Globe2,
-  HeartHandshake,
   ArrowRight,
-  ShieldCheck,
-  Building2
+  Building2,
+  HeartHandshake,
+  Target,
+  Clock3,
+  FileCheck2
 } from 'lucide-react';
 
 export const metadata = {
@@ -41,6 +41,10 @@ export default function BruixolaPage() {
             Iniciativa comunitària dissenyada per reforçar la trajectòria acadèmica, el benestar emocional i l&apos;orientació vital d&apos;adolescents en risc d&apos;exclusió social o abandonament escolar prematur.
           </p>
 
+          <div className="rounded-2xl border border-sky-200 bg-sky-50 px-5 py-4 text-sm leading-relaxed text-sky-950">
+            <strong>Nova línia socioeducativa en desenvolupament.</strong> Brúixola està dissenyat per oferir un acompanyament continuat a adolescents i famílies. L&apos;obertura de places es comunicarà quan l&apos;organització i els recursos necessaris estiguin confirmats.
+          </div>
+
           {/* Targeta Resum Piloto */}
           <div className="p-5 rounded-2xl bg-gradient-to-r from-sky-900 to-slate-900 text-white flex flex-wrap items-center justify-between gap-4 shadow-md">
             <div className="flex items-center gap-3">
@@ -54,7 +58,7 @@ export default function BruixolaPage() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-teal-400" />
-                <span className="text-xs font-semibold">Programa anual (12 mesos)</span>
+                <span className="text-xs font-semibold">Itinerari dissenyat · 12 mesos</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -62,6 +66,22 @@ export default function BruixolaPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { value: '30', label: 'places previstes per a adolescents' },
+            { value: '25', label: 'famílies previstes a l’itinerari' },
+            { value: '12', label: 'mesos d’intervenció' },
+            { value: '100%', label: 'accés gratuït' },
+          ].map((item) => (
+            <div key={item.label} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div className="text-3xl font-extrabold text-sky-700">{item.value}</div>
+              <div className="mt-1 text-xs sm:text-sm font-medium text-slate-600">{item.label}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -141,6 +161,27 @@ export default function BruixolaPage() {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="space-y-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Un itinerari continu, no activitats aïllades</h2>
+          <p className="max-w-3xl text-sm sm:text-base text-slate-600 leading-relaxed">Cada participant disposarà d&apos;un Pla d&apos;Acompanyament Individualitzat, seguiment familiar i evidències de progrés.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            { icon: Clock3, title: 'Ritme continuat', text: '38 sessions d’habilitats per a la vida, 19 de laboratori digital i 20 de competència comunicativa.' },
+            { icon: HeartHandshake, title: 'Acompanyament', text: '10 tutories individuals i seguiment amb cada família durant l’itinerari.' },
+            { icon: Target, title: 'Orientació i comunitat', text: 'Quatre sortides de descoberta vocacional i aprenentatge-servei.' },
+            { icon: FileCheck2, title: 'Avaluació', text: 'Indicadors inicials, seguiment intermedi i avaluació final amb evidències dissociades.' },
+          ].map(({ icon: Icon, title, text }) => (
+            <div key={title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <Icon className="h-6 w-6 text-teal-700" />
+              <h3 className="mt-4 font-bold text-slate-900">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Caixa d'Accés i Coordinació Institucional */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-10 rounded-3xl bg-slate-900 text-white border border-slate-800 space-y-4">
@@ -148,12 +189,13 @@ export default function BruixolaPage() {
             <Building2 className="w-4 h-4" />
             <span>Vies d&apos;Accés i Derivació Institucional</span>
           </div>
-          <h2 className="text-2xl font-bold">Com accedir al programa?</h2>
+          <h2 className="text-2xl font-bold">Vols rebre informació?</h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
-            L&apos;accés al Projecte Brúixola es realitza principalment mitjançant <strong>derivació coordinada amb els Serveis Socials municipals i els departaments d&apos;orientació dels centres educatius públics</strong> de la comarca, assegurant que els recursos arribin a qui més ho necessita.
+            El projecte es troba en fase de desenvolupament i encara no hi ha una convocatòria de places oberta. Les famílies, professionals i entitats interessades poden sol·licitar informació sense que això impliqui admissió, derivació ni compromís de col·laboració.
           </p>
-          <div className="pt-2 text-xs text-slate-400">
-            Per a consultes de coordinació tècnica institucional: <a href="mailto:info@asociacioneducafe.org" className="text-sky-300 underline font-semibold">info@asociacioneducafe.org</a>
+          <div className="pt-2 flex flex-wrap gap-3">
+            <a href="mailto:info@asociacioneducafe.org?subject=Informació%20Projecte%20Brúixola" className="inline-flex items-center gap-2 rounded-xl bg-sky-500 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-sky-600">Sol·licitar informació <ArrowRight className="h-4 w-4" /></a>
+            <Link href="/transparencia" className="inline-flex items-center rounded-xl border border-slate-700 px-5 py-3 text-sm font-bold text-slate-200 transition-colors hover:bg-slate-800">Consultar transparència</Link>
           </div>
         </div>
       </section>

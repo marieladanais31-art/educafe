@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Users, BookOpen, HeartHandshake, ShieldCheck, Heart } from 'lucide-react';
+import { Users, BookOpen } from 'lucide-react';
 
 export const metadata = {
   title: 'Qui Som | Associació Cristiana EducaFe',
@@ -103,9 +102,10 @@ export default function QuiSomPage() {
           <p className="text-slate-600 text-sm">
             Òrgan col·legiat de govern i representació de l&apos;Associació Cristiana EducaFe.
           </p>
+          <p className="text-xs text-slate-500">Composició aprovada per l’Assemblea General del 3 de juliol de 2026. L’actualització registral es troba en tramitació.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider text-sky-600">Presidència</div>
             <div className="text-lg font-bold text-slate-900">Elías Vidal Campalans</div>
@@ -114,14 +114,8 @@ export default function QuiSomPage() {
 
           <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2">
             <div className="text-xs font-bold uppercase tracking-wider text-teal-600">Secretaria</div>
-            <div className="text-lg font-bold text-slate-900">Mary Claudia García Jiménez</div>
+            <div className="text-lg font-bold text-slate-900">Patricia Campalans</div>
             <p className="text-xs text-slate-500">Gestió documental, actes i coordinació administrativa.</p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2">
-            <div className="text-xs font-bold uppercase tracking-wider text-amber-600">Tresoreria / Vocal</div>
-            <div className="text-lg font-bold text-slate-900">Mariela Andrade Aparicio</div>
-            <p className="text-xs text-slate-500">Control econòmic, rendició de comptes i suport metodològic.</p>
           </div>
         </div>
       </section>

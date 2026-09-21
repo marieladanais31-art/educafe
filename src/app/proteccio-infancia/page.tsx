@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { ShieldCheck, Lock, Mail, HeartHandshake, AlertCircle, FileText, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Lock, Mail, HeartHandshake, FileText, CheckCircle2 } from 'lucide-react';
 
 export const metadata = {
   title: 'Protecció a la Infància (LOPIVI) | Associació Cristiana EducaFe',
@@ -24,7 +23,7 @@ export default function ProteccioInfanciaPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            L&apos;Associació Cristiana EducaFe manté una política de tolerància zero davant qualsevol forma de violència, abús o negligència, aplicant de manera estricta el marc de la <strong>Llei Orgànica 8/2021 (LOPIVI)</strong>.
+            L&apos;Associació Cristiana EducaFe ha elaborat la seva política d&apos;entorn segur i prevenció davant qualsevol forma de violència. El document resta pendent d&apos;aprovació formal per l&apos;òrgan de govern abans de l&apos;inici del Projecte Brúixola, d&apos;acord amb la <strong>Llei Orgànica 8/2021 (LOPIVI)</strong>.
           </p>
         </div>
       </section>
@@ -49,7 +48,7 @@ export default function ProteccioInfanciaPage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Marc Normatiu LOPIVI</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Compliment rigorós de la Llei Orgànica 8/2021, de 4 de juny, de protecció integral a la infància i l&apos;adolescència davant la violència en tots els nostres espais i activitats.
+              Marc d&apos;actuació preparat d&apos;acord amb la Llei Orgànica 8/2021, de 4 de juny, pendent d&apos;aprovació formal i publicació.
             </p>
           </div>
 
@@ -60,7 +59,7 @@ export default function ProteccioInfanciaPage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900">Delegada de Protecció</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              L&apos;entitat compta amb una professional responsable de l&apos;àmbit del <strong>Treball Social</strong> com a Delegada de Protecció, encarregada de vetllar pel protocol i atendre qualsevol situació.
+              Es designarà com a Delegada de Protecció la persona responsable del perfil de <strong>Treball Social</strong> del projecte abans d&apos;iniciar l&apos;atenció directa.
             </p>
           </div>
 
@@ -88,20 +87,20 @@ export default function ProteccioInfanciaPage() {
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold">Canal de Comunicació de Protecció</h2>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Si ets un infant, jove, mare, pare, professional o voluntari i vols comunicar qualsevol situació de risc, dubte o incidència, pots contactar directament amb la nostra Delegada de Protecció amb total confidencialitat i protecció de dades.
+              Si ets un infant, jove, mare, pare, professional o voluntari i vols comunicar qualsevol situació de risc, dubte o incidència, pots fer-ho mitjançant aquest canal. La comunicació es tractarà de manera confidencial.
             </p>
           </div>
 
           <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
-              href="mailto:proteccio@asociacioneducafe.org"
+              href="mailto:info@asociacioneducafe.org?subject=Canal%20confidencial%20de%20protecció"
               className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-600 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition-colors text-sm"
             >
               <Mail className="w-4 h-4" />
-              <span>proteccio@asociacioneducafe.org</span>
+              <span>Escriure al canal de protecció</span>
             </a>
             <span className="text-xs text-slate-400">
-              Canal gestionat directament pel departament de Treball Social.
+              La comunicació es derivarà a la persona responsable de protecció.
             </span>
           </div>
         </div>

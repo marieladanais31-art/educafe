@@ -3,9 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   Compass,
-  Users,
   HeartHandshake,
-  CheckCircle2,
   ArrowRight,
   ShieldCheck,
   Heart
@@ -63,11 +61,11 @@ export default function EsHomePage() {
                 </Link>
 
                 <Link
-                  href="/es/voluntariado"
+                  href="/es/hazte-socio"
                   className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-semibold px-5 py-3.5 rounded-xl border border-slate-700 transition-all text-sm"
                 >
                   <HeartHandshake className="w-4 h-4 text-teal-400" />
-                  <span>Únete</span>
+                  <span>Hazte socio</span>
                 </Link>
               </div>
 
@@ -179,7 +177,7 @@ export default function EsHomePage() {
                 Red Comunitaria y Voluntariado
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Cohesión social, actividades de aprendizaje-servicio (ApS) y colaboración estrecha con Servicios Sociales, centros educativos y entidades locales del territorio.
+                Cohesión social, actividades de aprendizaje-servicio (ApS) y participación de familias, personas voluntarias y agentes de la comunidad.
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100">
@@ -207,10 +205,10 @@ export default function EsHomePage() {
                 Compromiso Institucional
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                Programas de acción social 100% gratuitos, de acceso abierto y aconfesionales
+                Acción social de acceso gratuito, abierto y con contenidos aconfesionales
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                La participación en nuestras actividades no está condicionada por creencias, origen ni capacidad económica. Trabajamos coordinadamente con la red pública para garantizar la máxima equidad.
+                La participación no está condicionada por creencias, origen ni capacidad económica. Cada actividad se comunicará con claridad cuando cuente con organización, recursos y plazas confirmadas.
               </p>
             </div>
 

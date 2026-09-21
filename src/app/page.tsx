@@ -3,9 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   Compass,
-  Users,
   HeartHandshake,
-  CheckCircle2,
   ArrowRight,
   ShieldCheck,
   Heart
@@ -58,11 +56,11 @@ export default function HomePage() {
                 </Link>
 
                 <Link
-                  href="/voluntariat"
+                  href="/fes-te-soci"
                   className="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-semibold px-5 py-3.5 rounded-xl border border-slate-700 transition-all text-sm"
                 >
                   <HeartHandshake className="w-4 h-4 text-teal-400" />
-                  <span>Uneix-te</span>
+                  <span>Fes-te soci</span>
                 </Link>
               </div>
 
@@ -174,7 +172,7 @@ export default function HomePage() {
                 Xarxa Comunitària i Voluntariat
               </h3>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Cohesió social, activitats d&apos;aprenentatge-servei (ApS) i col·laboració estreta amb Serveis Socials, centres educatius i entitats locals del territori.
+                Cohesió social, activitats d&apos;aprenentatge-servei (ApS) i participació de famílies, persones voluntàries i agents de la comunitat.
               </p>
             </div>
             <div className="pt-4 border-t border-slate-100">
@@ -202,10 +200,10 @@ export default function HomePage() {
                 Compromís Institucional
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                Programes d&apos;acció social 100% gratuïts, d&apos;accés obert i aconfessionals
+                Acció social d&apos;accés gratuït, obert i amb continguts aconfessionals
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                La participació a les nostres activitats no està condicionada per creences, origen o capacitat econòmica. Treballem coordinadament amb la xarxa pública per garantir la màxima equitat.
+                La participació no està condicionada per creences, origen ni capacitat econòmica. Cada activitat es comunicarà amb claredat quan disposi d’organització, recursos i places confirmades.
               </p>
             </div>
 

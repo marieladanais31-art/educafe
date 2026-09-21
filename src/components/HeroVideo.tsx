@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Sparkles, ArrowRight, ShieldCheck, Cpu, Sprout, Heart, Play, Activity } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Cpu, Sprout, Heart, Activity } from 'lucide-react';
 import TechParticles from '@/app/components/TechParticles';
 import TiltCard from './3DTiltCard';
 

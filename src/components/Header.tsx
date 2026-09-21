@@ -7,6 +7,8 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ShieldCheck, MapPin, HeartHandshake, Heart } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
+// Encabezado institucional compartido por las versiones catalana y castellana.
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();

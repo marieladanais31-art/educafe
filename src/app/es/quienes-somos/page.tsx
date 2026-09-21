@@ -31,7 +31,7 @@ export default function EsQuienesSomosPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900 aspect-[16/9]">
           <Image
-            src="/images/hub-spain-classroom.jpg"
+            src="/images/family-javea.jpg"
             alt="Comunidad, familias y equipo de la Asociación EducaFe"
             fill
             className="object-cover object-center"

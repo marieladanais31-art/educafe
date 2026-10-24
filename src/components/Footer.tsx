@@ -101,6 +101,15 @@ export default function Footer() {
                   <span>{isEs ? 'Protección a la Infancia (LOPIVI)' : 'Protecció a la Infància (LOPIVI)'}</span>
                 </Link>
               </li>
+              <li>
+                <Link
+                  href={isEs ? '/es/alianzas-y-recursos' : '/aliances-i-recursos'}
+                  className="hover:text-sky-400 transition-colors flex items-center gap-2"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                  <span>{isEs ? 'Alianzas y recursos' : 'Aliances i recursos'}</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -148,7 +157,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-sky-300 hover:text-white transition-all shadow-sm group"
             >
-              <span>{isEs ? 'Acceso a la Red Educativa / Campus' : 'Accés a la Xarxa Educativa / Campus'}</span>
+              <span>Xarxa EducaFe</span>
               <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
@@ -183,6 +192,13 @@ export default function Footer() {
               className="hover:text-sky-300 transition-colors"
             >
               {isEs ? 'Voluntariado' : 'Voluntariat'}
+            </Link>
+            <span>·</span>
+            <Link
+              href={isEs ? '/es/alianzas-y-recursos' : '/aliances-i-recursos'}
+              className="hover:text-sky-300 transition-colors"
+            >
+              {isEs ? 'Alianzas y recursos' : 'Aliances i recursos'}
             </Link>
           </div>
         </div>

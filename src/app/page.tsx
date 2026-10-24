@@ -66,9 +66,8 @@ export default function HomePage() {
 
               {/* Badges de Garantia Social */}
               <div className="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ En desenvolupament</span>
                 <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Compromís educatiu</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Aconfessional i Inclusiu</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Inclusiu</span>
               </div>
             </div>
 
@@ -200,7 +199,7 @@ export default function HomePage() {
                 Compromís Institucional
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                Acció educativa responsable, inclusiva i amb continguts aconfessionals
+                Acció educativa responsable i inclusiva
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                 Cada activitat es comunicarà amb claredat quan disposi d&apos;organització, finançament, condicions de participació i places confirmades.

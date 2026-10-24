@@ -71,9 +71,8 @@ export default function EsHomePage() {
 
               {/* Badges de Garantía Social */}
               <div className="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-emerald-400">✓ En desarrollo</span>
                 <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Compromiso educativo</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Aconfesional e Inclusivo</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Inclusivo</span>
               </div>
             </div>
 
@@ -205,7 +204,7 @@ export default function EsHomePage() {
                 Compromiso Institucional
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug">
-                Acción educativa responsable, inclusiva y con contenidos aconfesionales
+                Acción educativa responsable e inclusiva
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                 Cada actividad se comunicará con claridad cuando cuente con organización, financiación, condiciones de participación y plazas confirmadas.

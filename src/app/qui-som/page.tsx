@@ -59,18 +59,18 @@ export default function QuiSomPage() {
         </div>
       </section>
 
-      {/* Inspiració i Aconfessionalitat */}
+      {/* Inspiració i Compromís Social */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Inspiració i Compromís Social Aconfessional
+              Inspiració i Compromís Social
             </h2>
             <p className="text-slate-600 leading-relaxed">
               L&apos;<strong>Associació Cristiana EducaFe</strong> és una entitat d&apos;inspiració cristiana. Aquesta inspiració explica per què fem aquesta tasca, però no constitueix cap requisit ni condició per rebre-la.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              La nostra acció social es dissenya amb vocació de servei, inclusió i continguts aconfessionals. Les condicions de participació de cada activitat es comunicaran quan estiguin confirmats l&apos;organització, el finançament i el nombre de places.
+              La nostra acció social es dissenya amb vocació de servei i inclusió. Les condicions de participació de cada activitat es comunicaran quan estiguin confirmats l&apos;organització, el finançament i el nombre de places.
             </p>
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
               <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Vocació de servei</span>

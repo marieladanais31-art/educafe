@@ -59,7 +59,7 @@ export default function EsQuienesSomosPage() {
         </div>
       </section>
 
-      {/* Inspiración y Aconfesionalidad */}
+      {/* Inspiración y Compromiso Social */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-4">
@@ -70,7 +70,7 @@ export default function EsQuienesSomosPage() {
               La <strong>Asociación Cristiana EducaFe</strong> es una entidad de inspiración cristiana. Esa inspiración explica por qué hacemos este trabajo, pero no constituye ningún requisito ni condición para recibirlo.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Nuestra acción social se diseña con vocación de servicio, inclusión y contenidos aconfesionales. Las condiciones de participación de cada actividad se comunicarán cuando estén confirmados su organización, financiación y número de plazas.
+              Nuestra acción social se diseña con vocación de servicio e inclusión. Las condiciones de participación de cada actividad se comunicarán cuando estén confirmados su organización, financiación y número de plazas.
             </p>
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
               <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Vocación de servicio</span>

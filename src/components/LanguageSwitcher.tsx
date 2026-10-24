@@ -20,6 +20,7 @@ export default function LanguageSwitcher() {
       if (pathname.includes('/es/transparencia')) return '/transparencia';
       if (pathname.includes('/es/proteccion-infancia')) return '/proteccio-infancia';
       if (pathname.includes('/es/politica-de-privacidad')) return '/politica-de-privacidad';
+      if (pathname.includes('/es/alianzas-y-recursos')) return '/aliances-i-recursos';
       return pathname.replace(/^\/es/, '') || '/';
     } else {
       if (isEs) return pathname;
@@ -29,6 +30,7 @@ export default function LanguageSwitcher() {
       if (pathname.includes('/transparencia')) return '/es/transparencia';
       if (pathname.includes('/proteccio-infancia')) return '/es/proteccion-infancia';
       if (pathname.includes('/politica-de-privacidad')) return '/es/politica-de-privacidad';
+      if (pathname.includes('/aliances-i-recursos')) return '/es/alianzas-y-recursos';
       return `/es${pathname}`;
     }
   };

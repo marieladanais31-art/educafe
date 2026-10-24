@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/fes-te-soci',
     '/proteccio-infancia',
     '/politica-de-privacidad',
+    '/aliances-i-recursos',
     '/es',
     '/es/quienes-somos',
     '/es/proyecto-bruixola',
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/es/hazte-socio',
     '/es/proteccion-infancia',
     '/es/politica-de-privacidad',
+    '/es/alianzas-y-recursos',
   ];
 
   return routes.map((route) => ({

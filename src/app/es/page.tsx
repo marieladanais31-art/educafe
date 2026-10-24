@@ -71,8 +71,14 @@ export default function EsHomePage() {
 
               {/* Badges de Garantía Social */}
               <div className="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
+                <a
+                  href="mailto:info@asociacioneducafe.org?subject=Lista%20de%20inter%C3%A9s%20Br%C3%BAixola"
+                  className="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  ✓ Proyecto piloto Brúixola · lista de interés abierta
+                </a>
                 <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Compromiso educativo</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Inclusivo</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Red educativa</span>
               </div>
             </div>
 
@@ -112,7 +118,7 @@ export default function EsHomePage() {
             Pilares de nuestra labor socioeducativa
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Presentamos las líneas educativas y familiares que EducaFe quiere impulsar a medida que se confirmen los recursos y las condiciones necesarias.
+            Desarrollamos líneas educativas, de orientación familiar y apoyo comunitario para impulsar el bienestar de los jóvenes y familias.
           </p>
         </div>
 

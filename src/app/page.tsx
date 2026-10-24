@@ -66,8 +66,14 @@ export default function HomePage() {
 
               {/* Badges de Garantia Social */}
               <div className="pt-4 flex flex-wrap items-center gap-2.5 text-xs font-semibold">
+                <a
+                  href="mailto:info@asociacioneducafe.org?subject=Llista%20d%27inter%C3%A8s%20Br%C3%BAixola"
+                  className="px-3 py-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  ✓ Projecte pilot Brúixola · llista d&apos;interès oberta
+                </a>
                 <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-sky-300">✓ Compromís educatiu</span>
-                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Inclusiu</span>
+                <span className="px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700 text-amber-300">✓ Xarxa educativa</span>
               </div>
             </div>
 
@@ -107,7 +113,7 @@ export default function HomePage() {
             Pilars de la nostra tasca socioeducativa
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Presentem les línies educatives i familiars que EducaFe vol impulsar a mesura que es confirmin els recursos i les condicions necessàries.
+            Desenvolupem línies educatives, d&apos;orientació familiar i suport comunitari per impulsar el benestar dels infants, joves i famílies.
           </p>
         </div>
 

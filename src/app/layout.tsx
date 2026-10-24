@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | Associació Cristiana EducaFe',
   },
   description:
-    'Associació Cristiana EducaFe (NIF G19357789 · Registre Generalitat núm. 75881). Entitat sense ànim de lucre compromesa amb l\'equitat, l\'orientació juvenil (Projecte Brúixola), suport familiar i inclusió a les comarques de Tarragona.',
+    'Entitat sense ànim de lucre a Tarragona compromesa amb l\'equitat, l\'orientació juvenil (Projecte Brúixola), suport familiar i inclusió social.',
   keywords: [
     'Associació Cristiana EducaFe',
     'NIF G19357789',
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     'Mont-roig del Camp',
     'Suport familiar',
     'Parentalitat positiva',
-    'Orientació juvenil Baix Camp',
-    'Protecció a la infància LOPIVI',
-    'Transparència associacions Catalunya',
+    'Orientació juvenil',
+    'Protecció infància LOPIVI',
+    'Transparència associacions',
   ],
   authors: [{ name: 'Associació Cristiana EducaFe' }],
   creator: 'Associació Cristiana EducaFe',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Associació Cristiana EducaFe | Acció Socioeducativa i Equitat Juvenil',
     description:
-      'Impulsem oportunitats educatives per a la infància, l\'adolescència i les famílies a les comarques de Tarragona, amb vocació de servei, inclusió i responsabilitat.',
+      'Impulsem oportunitats educatives per a la infància, adolescència i famílies a Tarragona amb vocació de servei i inclusió.',
     url: 'https://www.asociacioneducafe.org',
     siteName: 'Associació Cristiana EducaFe',
     locale: 'ca_ES',

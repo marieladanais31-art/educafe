@@ -59,21 +59,14 @@ export default function HeroVideo() {
                 />
               </div>
 
-              {/* Chanak Partner Badge */}
-              <div className="bg-slate-900/90 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-amber-500/40 flex items-center gap-3 shadow-lg shadow-amber-500/10">
-                <Image
-                  src="/images/logo-chanak-official.jpg"
-                  alt="Chanak International Academy Logo"
-                  width={45}
-                  height={45}
-                  className="h-9 w-9 object-contain rounded-lg border border-amber-400/30"
-                />
+              {/* Acció Social Badge */}
+              <div className="bg-slate-900/90 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-sky-500/40 flex items-center gap-3 shadow-lg shadow-sky-500/10">
                 <div className="flex flex-col text-left">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-amber-400">
-                    Referencia Educativa
+                  <span className="text-[10px] uppercase tracking-widest font-bold text-sky-400">
+                    Acción Social
                   </span>
                   <span className="text-xs font-semibold text-slate-200">
-                    Chanak Academy · Dual Diploma
+                    EducaFe · Dejando huella
                   </span>
                 </div>
               </div>
@@ -177,18 +170,11 @@ export default function HeroVideo() {
                   </div>
                 </div>
 
-                {/* Dual Diploma Badge Inside HUD */}
-                <div className="p-4 rounded-2xl bg-gradient-to-r from-amber-950/60 to-slate-900 border border-amber-500/30 flex items-center gap-4">
-                  <Image
-                    src="/images/logo-chanak-official.jpg"
-                    alt="Chanak Academy Logo"
-                    width={40}
-                    height={40}
-                    className="h-10 w-10 object-contain rounded-lg shrink-0 border border-amber-400/40"
-                  />
+                {/* Acció Social HUD */}
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-sky-950/60 to-slate-900 border border-sky-500/30 flex items-center gap-4">
                   <div>
-                    <div className="text-xs font-bold text-amber-300">Ruta Dual Diploma Internacional</div>
-                    <div className="text-[11px] text-slate-300">Acreditación de competencias & Refuerzo de excelencia</div>
+                    <div className="text-xs font-bold text-sky-300">Acompañamiento Educativo</div>
+                    <div className="text-[11px] text-slate-300">Desarrollo de competencias y orientación integral</div>
                   </div>
                 </div>
 

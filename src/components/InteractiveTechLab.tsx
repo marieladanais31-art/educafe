@@ -221,10 +221,10 @@ export async function DeployApp() {
                   <div className="p-4 rounded-2xl bg-amber-950/40 border border-amber-800/80 space-y-2 text-left">
                     <div className="text-xs font-bold text-amber-300 flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-amber-400" />
-                      <span>Articulación con Chanak International Academy</span>
+                      <span>Articulación Pedagógica</span>
                     </div>
                     <p className="text-xs text-slate-200 leading-relaxed font-normal">
-                      Contenidos homologados para el acompañamiento en la ruta de Doble Titulación Internacional (Dual Diploma) y preparación vocacional universitaria.
+                      Contenidos metodológicos para el acompañamiento en habilidades para la vida y preparación vocacional.
                     </p>
                   </div>
 

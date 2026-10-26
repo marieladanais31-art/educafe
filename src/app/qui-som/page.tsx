@@ -62,20 +62,39 @@ export default function QuiSomPage() {
       {/* Inspiració i Compromís Social */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 space-y-4">
+          <div className="lg:col-span-7 space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-800 text-xs font-bold uppercase tracking-wider border border-teal-200">
+              <span>Associació Cristiana · Deixant petjada</span>
+            </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Inspiració i Compromís Social
+              Inspiració, Identitat i Accés Obert
             </h2>
-            <p className="text-slate-600 leading-relaxed">
-              L&apos;<strong>Associació Cristiana EducaFe</strong> és una entitat d&apos;inspiració cristiana. Aquesta inspiració explica per què fem aquesta tasca, però no constitueix cap requisit ni condició per rebre-la.
+            <p className="text-slate-600 leading-relaxed font-medium">
+              Associació cristiana. Educació en valors per a famílies, esglésies i escoles.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              La nostra acció social es dissenya amb vocació de servei i inclusió. Les condicions de participació de cada activitat es comunicaran quan estiguin confirmats l&apos;organització, el finançament i el nombre de places.
+              L&apos;<strong>Associació Cristiana EducaFe</strong> és una entitat d&apos;inspiració cristiana compromesa amb la dignitat de cada persona, la cura de la infància i l&apos;acompanyament integral a les famílies.
             </p>
+
+            {/* Caixa d'Accés Obert Requerida */}
+            <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 space-y-2">
+              <div className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+                Compromís d&apos;Accés Obert i Universal
+              </div>
+              <p className="text-sm sm:text-base font-semibold leading-relaxed">
+                &ldquo;Els nostres programes socials i de formació estan oberts a totes les famílies, sense condicionar la participació a creences, origen ni capacitat econòmica.&rdquo;
+              </p>
+            </div>
+
+            {/* Cita Bíblica Institucional Proverbis 22:6 */}
+            <div className="p-4 rounded-xl bg-slate-50 border-l-4 border-sky-600 text-slate-700 text-sm italic">
+              &ldquo;Instrueix l&apos;infant en el camí que ha de seguir, i ni de gran no se&apos;n desviarà.&rdquo; — <strong className="not-italic text-slate-900 font-semibold">Proverbis 22:6</strong>
+            </div>
+
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
               <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Vocació de servei</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Condicions transparents</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ No discriminació</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Accés sense discriminació</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Transparència institucional</span>
             </div>
           </div>
 

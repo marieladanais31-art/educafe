@@ -62,20 +62,39 @@ export default function EsQuienesSomosPage() {
       {/* Inspiración y Compromiso Social */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 space-y-4">
+          <div className="lg:col-span-7 space-y-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-teal-800 text-xs font-bold uppercase tracking-wider border border-teal-200">
+              <span>Asociación Cristiana · Dejando huella</span>
+            </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Inspiración y Naturaleza de la Acción Social
+              Inspiración, Identidad y Acceso Abierto
             </h2>
-            <p className="text-slate-600 leading-relaxed">
-              La <strong>Asociación Cristiana EducaFe</strong> es una entidad de inspiración cristiana. Esa inspiración explica por qué hacemos este trabajo, pero no constituye ningún requisito ni condición para recibirlo.
+            <p className="text-slate-600 leading-relaxed font-medium">
+              Asociación cristiana. Educación en valores para familias, iglesias y escuelas.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Nuestra acción social se diseña con vocación de servicio e inclusión. Las condiciones de participación de cada actividad se comunicarán cuando estén confirmados su organización, financiación y número de plazas.
+              La <strong>Asociación Cristiana EducaFe</strong> es una entidad de inspiración cristiana comprometida con la dignidad de cada persona, el cuidado de la infancia y el acompañamiento integral a las familias.
             </p>
+
+            {/* Recuadro de Acceso Abierto Requerido */}
+            <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-950 space-y-2">
+              <div className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+                Compromiso de Acceso Abierto y Universal
+              </div>
+              <p className="text-sm sm:text-base font-semibold leading-relaxed">
+                &ldquo;Nuestros programas sociales y de formación están abiertos a todas las familias, sin condicionar la participación a creencias, origen ni capacidad económica.&rdquo;
+              </p>
+            </div>
+
+            {/* Cita Bíblica Institucional Proverbios 22:6 */}
+            <div className="p-4 rounded-xl bg-slate-50 border-l-4 border-sky-600 text-slate-700 text-sm italic">
+              &ldquo;Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él.&rdquo; — <strong className="not-italic text-slate-900 font-semibold">Proverbios 22:6</strong>
+            </div>
+
             <div className="pt-2 flex flex-wrap gap-2 text-xs font-semibold">
               <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Vocación de servicio</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Condiciones transparentes</span>
-              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ No discriminación</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Acceso sin discriminación</span>
+              <span className="px-3 py-1 bg-slate-100 rounded-lg text-slate-700">✓ Transparencia institucional</span>
             </div>
           </div>
 

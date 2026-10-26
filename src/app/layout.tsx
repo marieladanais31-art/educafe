@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | Associació Cristiana EducaFe',
   },
   description:
-    'Entitat sense ànim de lucre a Tarragona compromesa amb l\'equitat, l\'orientació juvenil (Projecte Brúixola), suport familiar i inclusió social.',
+    'Associació cristiana. Educació en valors per a famílies, esglésies i escoles. Acció socioeducativa, Projecte Brúixola i suport familiar a Catalunya.',
   keywords: [
     'Associació Cristiana EducaFe',
     'NIF G19357789',

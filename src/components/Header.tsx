@@ -14,23 +14,27 @@ export default function Header() {
   const pathname = usePathname();
   const isEs = pathname?.startsWith('/es');
 
-  // Navigation items including Voluntariado & Donar
+  // Navigation items including Voluntariado, Recursos & Donar
   const navItems = isEs
     ? [
         { label: 'Inicio', href: '/es' },
         { label: 'Quiénes Somos', href: '/es/quienes-somos' },
         { label: 'Proyecto Brúixola', href: '/es/proyecto-bruixola' },
+        { label: 'Recursos', href: '/es/recursos' },
+        { label: 'Transparencia', href: '/es/transparencia' },
         { label: 'Voluntariado', href: '/es/voluntariado' },
-        { label: 'Donar / Colabora', href: '/es/donar' },
-        { label: 'Protección a la Infancia', href: '/es/proteccion-infancia' },
+        { label: 'Donar', href: '/es/donar' },
+        { label: 'Protección Infantil', href: '/es/proteccion-infancia' },
       ]
     : [
         { label: 'Inici', href: '/' },
         { label: 'Qui Som', href: '/qui-som' },
         { label: 'Projecte Brúixola', href: '/bruixola' },
+        { label: 'Recursos', href: '/recursos' },
+        { label: 'Transparència', href: '/transparencia' },
         { label: 'Voluntariat', href: '/voluntariat' },
-        { label: 'Donar / Col·labora', href: '/donar' },
-        { label: 'Protecció a la Infància', href: '/proteccio-infancia' },
+        { label: 'Donar', href: '/donar' },
+        { label: 'Protecció Infància', href: '/proteccio-infancia' },
       ];
 
   const memberText = isEs ? 'Hazte socio' : 'Fes-te soci';
@@ -84,6 +88,14 @@ export default function Header() {
                 className="h-11 sm:h-13 w-auto object-contain group-hover:scale-102 transition-transform"
                 priority
               />
+            </div>
+            <div className="hidden 2xl:flex flex-col border-l border-slate-200 pl-3">
+              <span className="text-[11px] font-bold text-sky-800 tracking-wide uppercase">
+                {isEs ? 'Dejando huella' : 'Deixant petjada'}
+              </span>
+              <span className="text-[10px] text-slate-500 font-medium">
+                {isEs ? 'Educación en valores' : 'Educació en valors'}
+              </span>
             </div>
           </Link>
 

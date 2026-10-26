@@ -18,8 +18,10 @@ export default function LanguageSwitcher() {
       if (pathname.includes('/es/quienes-somos')) return '/qui-som';
       if (pathname.includes('/es/proyecto-bruixola')) return '/bruixola';
       if (pathname.includes('/es/transparencia')) return '/transparencia';
+      if (pathname.includes('/es/recursos')) return '/recursos';
       if (pathname.includes('/es/proteccion-infancia')) return '/proteccio-infancia';
       if (pathname.includes('/es/politica-de-privacidad')) return '/politica-de-privacidad';
+      if (pathname.includes('/es/politica-de-cookies')) return '/politica-de-cookies';
       if (pathname.includes('/es/alianzas-y-recursos')) return '/aliances-i-recursos';
       return pathname.replace(/^\/es/, '') || '/';
     } else {
@@ -28,8 +30,10 @@ export default function LanguageSwitcher() {
       if (pathname.includes('/qui-som')) return '/es/quienes-somos';
       if (pathname.includes('/bruixola')) return '/es/proyecto-bruixola';
       if (pathname.includes('/transparencia')) return '/es/transparencia';
+      if (pathname.includes('/recursos')) return '/es/recursos';
       if (pathname.includes('/proteccio-infancia')) return '/es/proteccion-infancia';
       if (pathname.includes('/politica-de-privacidad')) return '/es/politica-de-privacidad';
+      if (pathname.includes('/politica-de-cookies')) return '/es/politica-de-cookies';
       if (pathname.includes('/aliances-i-recursos')) return '/es/alianzas-y-recursos';
       return `/es${pathname}`;
     }

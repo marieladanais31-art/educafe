@@ -14,7 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/donar',
     '/fes-te-soci',
     '/proteccio-infancia',
+    '/transparencia',
+    '/recursos',
     '/politica-de-privacidad',
+    '/politica-de-cookies',
     '/aliances-i-recursos',
     '/es',
     '/es/quienes-somos',
@@ -23,7 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/es/donar',
     '/es/hazte-socio',
     '/es/proteccion-infancia',
+    '/es/transparencia',
+    '/es/recursos',
     '/es/politica-de-privacidad',
+    '/es/politica-de-cookies',
     '/es/alianzas-y-recursos',
   ];
 

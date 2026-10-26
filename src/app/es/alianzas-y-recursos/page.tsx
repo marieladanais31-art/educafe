@@ -48,7 +48,7 @@ export default function AlianzasYRecursosPage() {
 
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 text-slate-800 text-base sm:text-lg leading-relaxed">
               <p>
-                Chanak International Academy, escuela privada de inspiración cristiana registrada en Florida (FLDOE n.º 134620), colabora con EducaFe aportando el currículo de Life Skills &amp; Leadership (habilidades para la vida, carácter y valores). La candidatura de Chanak a la acreditación MSA-CESS está en curso y no equivale a acreditación.
+                <strong>Chanak International Academy</strong>, alianza para el Programa Life Skills, Character &amp; Leadership. Escuela privada registrada en el Florida Department of Education (#134620), candidata a acreditación MSA-CESS.
               </p>
             </div>
 

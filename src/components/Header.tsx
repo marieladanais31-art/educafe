@@ -14,17 +14,16 @@ export default function Header() {
   const pathname = usePathname();
   const isEs = pathname?.startsWith('/es');
 
-  // Navigation items including Voluntariado, Recursos & Donar
+  // Navigation items: clean distribution without duplicate 'Donar' (which is in the CTA button)
   const navItems = isEs
     ? [
         { label: 'Inicio', href: '/es' },
         { label: 'Quiénes Somos', href: '/es/quienes-somos' },
-        { label: 'Proyecto Brúixola', href: '/es/proyecto-bruixola' },
+        { label: 'Proyecto Brújula', href: '/es/proyecto-bruixola' },
         { label: 'Recursos', href: '/es/recursos' },
         { label: 'Transparencia', href: '/es/transparencia' },
         { label: 'Voluntariado', href: '/es/voluntariado' },
-        { label: 'Donar', href: '/es/donar' },
-        { label: 'Protección Infantil', href: '/es/proteccion-infancia' },
+        { label: 'Protección Infancia', href: '/es/proteccion-infancia' },
       ]
     : [
         { label: 'Inici', href: '/' },
@@ -33,7 +32,6 @@ export default function Header() {
         { label: 'Recursos', href: '/recursos' },
         { label: 'Transparència', href: '/transparencia' },
         { label: 'Voluntariat', href: '/voluntariat' },
-        { label: 'Donar', href: '/donar' },
         { label: 'Protecció Infància', href: '/proteccio-infancia' },
       ];
 
@@ -75,17 +73,17 @@ export default function Header() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 gap-3">
           
           {/* Logo */}
-          <Link href={isEs ? '/es' : '/'} className="flex items-center gap-3 group">
+          <Link href={isEs ? '/es' : '/'} className="flex items-center gap-3 group shrink-0">
             <div className="relative h-14 w-auto flex items-center">
               <Image
                 src="/images/logo-educafe-official.png"
                 alt="Associació Cristiana EducaFe Logo"
                 width={220}
                 height={60}
-                className="h-11 sm:h-13 w-auto object-contain group-hover:scale-102 transition-transform"
+                className="h-11 sm:h-12 w-auto object-contain group-hover:scale-102 transition-transform"
                 priority
               />
             </div>
@@ -100,14 +98,14 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-6">
+          <nav className="hidden xl:flex items-center gap-3.5 2xl:gap-5 whitespace-nowrap">
             {navItems.map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-sm font-semibold transition-colors ${
+                  className={`text-[13px] 2xl:text-sm font-semibold transition-colors whitespace-nowrap px-1 py-1 ${
                     isActive
                       ? 'text-sky-600 font-bold border-b-2 border-sky-600 pb-0.5'
                       : 'text-slate-700 hover:text-sky-600'
@@ -120,12 +118,12 @@ export default function Header() {
           </nav>
 
           {/* Action Buttons & Language Switcher */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5 2xl:gap-3 shrink-0">
             <LanguageSwitcher />
 
             <Link
               href={donateHref}
-              className="inline-flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold px-3.5 py-2.5 rounded-xl transition-all"
+              className="inline-flex items-center gap-1.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold px-3 py-2 2xl:px-3.5 2xl:py-2.5 rounded-xl transition-all whitespace-nowrap"
             >
               <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
               <span>{donateText}</span>
@@ -133,7 +131,7 @@ export default function Header() {
 
             <Link
               href={memberHref}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition-all group"
+              className="inline-flex items-center gap-1.5 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white text-xs font-bold px-3 py-2 2xl:px-3.5 2xl:py-2.5 rounded-xl shadow-sm hover:shadow transition-all group whitespace-nowrap"
             >
               <HeartHandshake className="w-4 h-4 group-hover:scale-110 transition-transform" />
               <span>{memberText}</span>

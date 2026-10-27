@@ -237,30 +237,17 @@ export default function EsProyectoBruixolaPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-            <div className="flex items-center gap-2 text-sky-600 font-bold text-xs uppercase tracking-wider">
-              <Building2 className="w-4 h-4" />
-              <span>Ámbito Municipal</span>
-            </div>
-            <div className="text-lg font-bold text-slate-900">
-              Ajuntament de Mont-roig del Camp
-            </div>
-            <p className="text-xs text-slate-500">
-              Coordinación y cooperación en el ámbito territorial del municipio.
-            </p>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
+        <div className="max-w-2xl">
+          <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
             <div className="flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-wider">
               <Building2 className="w-4 h-4" />
-              <span>Espacio Comunitario</span>
+              <span>Espacio Comunitario y Municipal · Mont-roig del Camp</span>
             </div>
             <div className="text-lg font-bold text-slate-900">
-              EcoSpai
+              EcoSpai (Mont-roig del Camp)
             </div>
-            <p className="text-xs text-slate-500">
-              Colaboración comunitaria y actividades prácticas en el entorno local.
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Espacio comunitario y municipal para el desarrollo de actividades prácticas, sostenibilidad y aprendizaje-servicio en coordinación con el Ajuntament de Mont-roig del Camp para el acompañamiento y dinamización de adolescentes y familias del municipio.
             </p>
           </div>
         </div>
